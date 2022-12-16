@@ -3,7 +3,10 @@ data() {
     return {
         name: '',
         outputInfo: '',
-        finalOutputInfo: ''
+        finalOutputInfo: '',
+        toDoList: [],
+        toDoListItem: '',
+        vueLink: 'https://vuejs.org/guide/introduction.html'
     }
 },
 methods: {
@@ -18,6 +21,9 @@ methods: {
     },
     confirmInfo() {
         this.finalOutputInfo = this.outputInfo;
+    },
+    addItem() {
+        this.toDoList.push(this.toDoListItem);
     }
 }
 });

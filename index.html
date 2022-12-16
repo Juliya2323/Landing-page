@@ -22,13 +22,31 @@
       <br>
       <button v-on:click="showAlert">Show Alert</button>
       <hr />
-      
+      <hr>
+      <span>Outputting data in the field below</span>
+      <br>
       <input type="text" v-on:input="showName" />
       <p>{{ name }}</p>
       <hr />
-      
+      <hr>
+      <span>Outputting data in the field below only after ENTER is clicked</span>
+      <br>
       <input type="text" type="text" v-on:input="addInfo"  v-on:keyup.enter="confirmInfo" />
       <p>{{ finalOutputInfo }}</p>
+      <hr>
+      <hr>
+      <span>Creating a ToDo list</span>
+      <br>
+      <label for="toDoList"></label>
+      <input type="text" id="toDoList" v-model="toDoListItem">
+      <br>
+      <button v-on:click="addItem">Add an item</button>
+      <p v-for="toDoItem in toDoList">{{ toDoItem }}</p>
+      <hr>
+      <hr>
+      <span>Add a link</span>
+      <br>
+      <p>Learn more abot <a v-bind:href="vueLink">Vue</a></p>
     </section>
   </body>
 </html>
