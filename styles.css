@@ -93,3 +93,10 @@ header {
   background-color:rgba(126, 243, 218, 0.26);
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

@@ -14,6 +14,8 @@ data() {
         itemCSelected: false,
         itemDSelected: false,
         itemESelected: false,
+        styleColor: '',
+        visible: true,
     }
 },
 computed: {
@@ -28,6 +30,12 @@ computed: {
     },
     selectedBoxEStyle() {
         return { active: this.itemESelected };
+    },
+    vivibilityClasses() {
+        return {
+            visible: this.visible,
+            hidden: !this.visible
+        }
     }
 },
 methods: {
@@ -71,6 +79,9 @@ methods: {
         } else {
             this.itemESelected = !this.itemESelected;
         }
+    },
+    switchVisibility() {
+        this.visible = !this.visible;
     }
 }
 });

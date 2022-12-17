@@ -73,7 +73,13 @@
       </div>
       <hr>
       <hr>
-      <span></span>
+      <span>Enter the color to style the form</span>
+      <input type="text" v-model="styleColor">
+      <p v-bind:style="{'backgroundColor': styleColor}">Choose a color to style me:)</p>
+      <hr>
+      <hr>
+      <button v-on:click="switchVisibility">Switch visibility</button>
+      <p v-bind:class="vivibilityClasses">This paragraph may be hidden</p>
     </section>
   </body>
 </html>
