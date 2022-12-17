@@ -8,6 +8,18 @@ data() {
         toDoListItem: '',
         vueLink: 'https://vuejs.org/guide/introduction.html',
         location: '',
+        number: 0,
+    }
+},
+computed: {
+    result() {
+        if (this.number > 20) {
+            return 'It is too much';
+        } else if (this.number === 20) {
+            return this.number;
+        } else {
+            return 'Not enough!';
+        }
     }
 },
 methods: {
@@ -34,6 +46,10 @@ methods: {
     },
     resetLocationInput() {
         this.location = '';
+    },
+    addNumber(num) {
+        this.number = this. number + num;
+        console.log('a number was added')
     }
 }
 });

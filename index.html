@@ -55,6 +55,12 @@
       <br>
       <button v-on:click="resetLocationInput()">Reset input</button>
       <p>{{ addLocation() }}</p>
+      <hr>
+      <hr>
+      <span>Add a counter</span>
+      <button v-on:click="addNumber(3)">Add 3</button>
+      <button v-on:click="addNumber(1)">Add 1</button>
+      <p>The rusult is: {{ result }}</p>
     </section>
   </body>
 </html>
