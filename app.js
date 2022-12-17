@@ -9,6 +9,11 @@ data() {
         vueLink: 'https://vuejs.org/guide/introduction.html',
         location: '',
         number: 0,
+        itemASelected: false,
+        itemBSelected: false,
+        itemCSelected: false,
+        itemDSelected: false,
+        itemESelected: false,
     }
 },
 computed: {
@@ -20,6 +25,9 @@ computed: {
         } else {
             return 'Not enough!';
         }
+    },
+    selectedBoxEStyle() {
+        return { active: this.itemESelected };
     }
 },
 methods: {
@@ -50,6 +58,19 @@ methods: {
     addNumber(num) {
         this.number = this. number + num;
         console.log('a number was added')
+    },
+    selectItem(item) {
+        if (item === 'A') {
+            this.itemASelected = !this.itemASelected;
+        } else if (item === 'B') {
+            this.itemBSelected = !this.itemBSelected;
+        } else if (item === 'C') {
+            this.itemCSelected = !this.itemCSelected;
+        } else if (item === 'D') {
+            this.itemDSelected = !this.itemDSelected;
+        } else {
+            this.itemESelected = !this.itemESelected;
+        }
     }
 }
 });

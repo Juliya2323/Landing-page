@@ -61,6 +61,19 @@
       <button v-on:click="addNumber(3)">Add 3</button>
       <button v-on:click="addNumber(1)">Add 1</button>
       <p>The rusult is: {{ result }}</p>
+      <hr>
+      <hr>
+      <span>click on item to change its color</span>
+      <div id="box-wrapper">
+        <div class="box" v-bind:style="{ borderColor: itemASelected ? 'red' : 'black', backgroundColor: itemASelected ? 'salmon' : 'pink' }" v-on:click="selectItem('A')"></div>
+        <div v-bind:class="itemBSelected ? 'box active' : 'box' " v-on:click="selectItem('B')"></div>
+        <div v-bind:class="{box: true, active: itemCSelected}" v-on:click="selectItem('C')"></div>
+        <div class="box" v-bind:class="{active: itemDSelected}" v-on:click="selectItem('D')"></div>
+        <div class="box" v-bind:class="selectedBoxEStyle" v-on:click="selectItem('E')"></div>
+      </div>
+      <hr>
+      <hr>
+      <span></span>
     </section>
   </body>
 </html>

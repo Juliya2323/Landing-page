@@ -73,3 +73,23 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
+
+#box-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.box {
+  height: 80px;
+  width: 20%;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+}
+
+.active {
+  background-color:rgba(126, 243, 218, 0.26);
+}
+
