@@ -16,6 +16,7 @@ data() {
         itemESelected: false,
         styleColor: '',
         visible: true,
+        counter: 0,
     }
 },
 computed: {
@@ -82,7 +83,13 @@ methods: {
     },
     switchVisibility() {
         this.visible = !this.visible;
-    }
+    },
+    add(num) {
+        this.counter = this.counter + num;
+      },
+    reduce(num) {
+        this.counter = this.counter - num;
+      },
 }
 });
 

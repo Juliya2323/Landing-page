@@ -80,6 +80,13 @@
       <hr>
       <button v-on:click="switchVisibility">Switch visibility</button>
       <p v-bind:class="vivibilityClasses">This paragraph may be hidden</p>
+      <hr>
+      <hr>
+      <span>counter with a result</span>
+      <button v-on:click="add(5)">Add 5</button>
+      <button v-on:click="reduce(5)">Reduce 5</button>
+      <p v-once>Start: {{ counter }}</p>
+      <p>Final result: {{ counter }}</p>
     </section>
   </body>
 </html>
