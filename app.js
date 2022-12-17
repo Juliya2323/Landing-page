@@ -6,7 +6,8 @@ data() {
         finalOutputInfo: '',
         toDoList: [],
         toDoListItem: '',
-        vueLink: 'https://vuejs.org/guide/introduction.html'
+        vueLink: 'https://vuejs.org/guide/introduction.html',
+        location: '',
     }
 },
 methods: {
@@ -24,6 +25,15 @@ methods: {
     },
     addItem() {
         this.toDoList.push(this.toDoListItem);
+    },
+    addLocation() {
+        if (this.location === '') {
+            return '***'
+        }
+        return this.location + ', ' + 'Belarus';
+    },
+    resetLocationInput() {
+        this.location = '';
     }
 }
 });

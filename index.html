@@ -47,6 +47,14 @@
       <span>Add a link</span>
       <br>
       <p>Learn more abot <a v-bind:href="vueLink">Vue</a></p>
+      <hr>
+      <hr>
+      <span>2-way binding</span>
+      <br>
+      <input type="text" v-model="location">
+      <br>
+      <button v-on:click="resetLocationInput()">Reset input</button>
+      <p>{{ addLocation() }}</p>
     </section>
   </body>
 </html>
