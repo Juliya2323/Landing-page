@@ -2,91 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue Basics</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="app.js" defer></script>
+    <title>Vite + Vue</title>
   </head>
   <body>
-    <header>
-      <h1>Vue proggress tracker</h1>
-    </header>
-    <section id="assignment">
-      <h2>Vue Practice</h2>
-      <span>Show alert by click</span>
-      <br>
-      <button v-on:click="showAlert">Show Alert</button>
-      <hr />
-      <hr>
-      <span>Outputting data in the field below</span>
-      <br>
-      <input type="text" v-on:input="showName" />
-      <p>{{ name }}</p>
-      <hr />
-      <hr>
-      <span>Outputting data in the field below only after ENTER is clicked</span>
-      <br>
-      <input type="text" type="text" v-on:input="addInfo"  v-on:keyup.enter="confirmInfo" />
-      <p>{{ finalOutputInfo }}</p>
-      <hr>
-      <hr>
-      <span>Creating a ToDo list</span>
-      <br>
-      <label for="toDoList"></label>
-      <input type="text" id="toDoList" v-model="toDoListItem">
-      <br>
-      <button v-on:click="addItem">Add an item</button>
-      <p v-for="toDoItem in toDoList">{{ toDoItem }}</p>
-      <hr>
-      <hr>
-      <span>Add a link</span>
-      <br>
-      <p>Learn more abot <a v-bind:href="vueLink">Vue</a></p>
-      <hr>
-      <hr>
-      <span>2-way binding</span>
-      <br>
-      <input type="text" v-model="location">
-      <br>
-      <button v-on:click="resetLocationInput()">Reset input</button>
-      <p>{{ addLocation() }}</p>
-      <hr>
-      <hr>
-      <span>Add a counter</span>
-      <button v-on:click="addNumber(3)">Add 3</button>
-      <button v-on:click="addNumber(1)">Add 1</button>
-      <p>The rusult is: {{ result }}</p>
-      <hr>
-      <hr>
-      <span>click on item to change its color</span>
-      <div id="box-wrapper">
-        <div class="box" v-bind:style="{ borderColor: itemASelected ? 'red' : 'black', backgroundColor: itemASelected ? 'salmon' : 'pink' }" v-on:click="selectItem('A')"></div>
-        <div v-bind:class="itemBSelected ? 'box active' : 'box' " v-on:click="selectItem('B')"></div>
-        <div v-bind:class="{box: true, active: itemCSelected}" v-on:click="selectItem('C')"></div>
-        <div class="box" v-bind:class="{active: itemDSelected}" v-on:click="selectItem('D')"></div>
-        <div class="box" v-bind:class="selectedBoxEStyle" v-on:click="selectItem('E')"></div>
-      </div>
-      <hr>
-      <hr>
-      <span>Enter the color to style the form</span>
-      <input type="text" v-model="styleColor">
-      <p v-bind:style="{'backgroundColor': styleColor}">Choose a color to style me:)</p>
-      <hr>
-      <hr>
-      <button v-on:click="switchVisibility">Switch visibility</button>
-      <p v-bind:class="vivibilityClasses">This paragraph may be hidden</p>
-      <hr>
-      <hr>
-      <span>counter with a result</span>
-      <button v-on:click="add(5)">Add 5</button>
-      <button v-on:click="reduce(5)">Reduce 5</button>
-      <p v-once>Start: {{ counter }}</p>
-      <p>Final result: {{ counter }}</p>
-    </section>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
