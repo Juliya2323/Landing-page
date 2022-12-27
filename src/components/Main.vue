@@ -25,8 +25,41 @@
                 <div class="details_arrow"></div>
             </div>
         </div>
-        <div class="main_gallery"></div>
-        <div class="main_statistics"></div>
+        <div class="main_gallery">
+            <div class="gallery_card">
+                <div class="card_source">
+                    <div class="card_source_collection">Troy Ape collection</div>
+                    <div class="card_source_author">@tonyti</div>
+                </div>
+                <div class="img_wrapper">
+                    <img src="@/assets/monkey.png" alt="card">
+                </div>
+                <div class="card_info">
+                    <div class="card_time">
+                        <div class="card_time_main">23h : 41m : 11s </div>
+                        <div class="card_time_additional">Remaining time</div>
+                    </div>
+                    <div class="card_cost">
+                        <div class="card_cost_main">23.09 ETH</div>
+                        <div class="card_cost_additional">Highest bid</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_statistics">
+            <div class="statistics-item">
+                <div class="item_main_info">10.1k+</div>
+                <div class="item_additional_info">Art Work</div>
+            </div>
+            <div class="statistics-item">
+                <div class="item_main_info">1.1M</div>
+                <div class="item_additional_info">Artists</div>
+            </div>
+            <div class="statistics-item">
+                <div class="item_main_info">38k</div>
+                <div class="item_additional_info">Sales</div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -37,6 +70,8 @@
         background-color: #131313;
         font-family: 'Arial';   
         color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
     }
 
     .main_info {
@@ -120,6 +155,103 @@
         top: -7px;
         right: 75px;
     }
+
+    .gallery_card {
+        position: relative;
+        border: 1px solid #5BA300;
+        padding: 31px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        z-index: 2;
+    }
+
+    .gallery_card::after {
+        content: "";
+        display: inline-block;
+        top: 25px;
+        left: 42px;
+        position: absolute;
+        width: 445px;
+        height: 679px;
+        border: 1px solid #5BA300;
+        z-index: -1;
+    }
+
+    .card_source {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card_source_collection {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .card_source_author {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .card_info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card_time,
+    .card_cost {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    .card_time_main,
+    .card_cost_main {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .card_time_additional,
+    .card_cost_additional {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .main_statistics {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        max-width: 130px;
+        justify-content: flex-end;
+    }
+
+    .statistics-item {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .item_main_info {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 41px;
+    }
+
+    .item_additional_info {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    
 
 
   
