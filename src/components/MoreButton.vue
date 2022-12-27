@@ -2,7 +2,7 @@
     <button class="button_more">Connect wallet</button>
 </template>
 
-<style>
+<style scoped>
     .button_more {
         font-weight: 400;
         font-size: 19px;

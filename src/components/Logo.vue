@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .header_logo_wrapper {
     display: flex;
     justify-content: center;
