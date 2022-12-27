@@ -1,9 +1,10 @@
 <template>
-  <the-header></the-header>
+  <Header></Header>
   <slot></slot>
-  <footer class="footer">FOOTER</footer>
+  <Footer class="footer">FOOTER</Footer>
 </template>
 
 <script setup>
-   import TheHeader from '@/components/TheHeader.vue';
+   import Header from '@/components/Header.vue';
+   import Footer from '@/components/Footer.vue';
 </script>

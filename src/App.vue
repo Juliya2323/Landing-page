@@ -1,10 +1,10 @@
 <template>
-  <the-header></the-header>
+  <HeroPage></HeroPage>
 </template>
 
 
 <script setup>
-import TheHeader from "@/components/TheHeader.vue";
+import HeroPage from "@/pages/HeroPage.vue";
 </script>
 
 
