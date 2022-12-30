@@ -156,14 +156,19 @@
         right: 75px;
     }
 
-    .gallery_card {
+    .main_gallery {
         position: relative;
+        z-index: 2;
+    }
+
+    .gallery_card {
+        background-color: #131313;
         border: 1px solid #5BA300;
         padding: 31px 22px;
         display: flex;
         flex-direction: column;
         gap: 14px;
-        z-index: 2;
+
     }
 
     .gallery_card::after {
