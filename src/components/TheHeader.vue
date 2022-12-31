@@ -2,16 +2,16 @@
     <header class="header">
         <div class="header_wrapper">
             <Logo></Logo>
-            <nav class="header_wrapper_nav">
-                <ul class="header_wrapper_nav_list">
-                    <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_wrapper_nav_list_item">{{ link }}</a></li>
+            <nav class="header_nav">
+                <ul class="header_nav_list">
+                    <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_nav_list_item">{{ link }}</a></li>
                 </ul>
             </nav>
         </div>
         <div class="header_container">
-                <img :src="Search" alt="search" class="header_container_search">
-                <MoreButton class="header_container_button"></MoreButton>
-                <img src="@/assets/arrow.png" alt="download" class="header_container_img">
+                <img :src="Search" alt="search" class="header_search">
+                <MoreButton class="transparent_button header_button"></MoreButton>
+                <img src="@/assets/arrow.png" alt="download" class="header_download">
         </div>
       </header>
 </template>
@@ -39,8 +39,9 @@
       &_wrapper {
           display: flex;
           gap: 100px;
+      }
 
-          &_nav_list {
+      &_nav_list {
             display: flex;
             flex-wrap: wrap;
             gap: 63px;
@@ -54,15 +55,15 @@
               text-decoration: none;
             }
           }
-      }
 
       &_container {
         display: flex;
         gap: 28px;
         justify-content: center;
         align-items: center;
+      }
 
-        &_img {
+      &_download {
           background-color: #5BA300;
           padding: 14px;
           border-radius: 50%;
@@ -70,7 +71,6 @@
           justify-content: center;
           align-items: center;
         }
-      }
     }
          
   
