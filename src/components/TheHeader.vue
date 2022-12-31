@@ -10,7 +10,7 @@
         </div>
         <div class="header_container">
                 <img :src="Search" alt="search" class="header_search">
-                <MoreButton class="transparent_button header_button"></MoreButton>
+                <BaseTransparentButton class="header_button"></BaseTransparentButton>
                 <img src="@/assets/arrow.png" alt="download" class="header_download">
         </div>
       </header>
@@ -20,7 +20,7 @@
     import { reactive } from "vue";
     import Search from '@/assets/search.png';
     import Logo from '@/components/Logo.vue';
-    import MoreButton from '@/components/MoreButton.vue';
+    import BaseTransparentButton from '@/components/BaseTransparentButton.vue';
     const links = reactive(['Discover', 'Marketplace', 'More']);
 
 </script>

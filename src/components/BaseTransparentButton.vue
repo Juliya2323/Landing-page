@@ -1,9 +1,9 @@
 <template>
-    <button class="button_more">Connect wallet</button>
+    <button class="transparent_button">Connect wallet</button>
 </template>
 
 <style scoped>
-    .button_more {
+    .transparent_button {
         font-weight: 400;
         font-size: 19px;
         line-height: 22px;
