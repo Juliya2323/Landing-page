@@ -69,6 +69,8 @@
 
 <style scoped lang="scss">
 
+    $grayPrint: rgba(255, 255, 255, 0.6);
+
     .primary {
         padding: 0 10% 10%;
         background-color: #131313;
@@ -130,7 +132,7 @@
                         font-weight: 400;
                         font-size: 18px;
                         line-height: 27px;
-                        color: rgba(255, 255, 255, 0.6);
+                        color: $grayPrint;
                     }
                 }
             }
@@ -187,7 +189,7 @@
                         font-weight: 400;
                         font-size: 18px;
                         line-height: 27px;
-                        color: rgba(255, 255, 255, 0.6);
+                        color: $grayPrint;
                     }
                 }
 
@@ -214,7 +216,7 @@
                             font-weight: 400;
                             font-size: 18px;
                             line-height: 27px;
-                            color: rgba(255, 255, 255, 0.6);
+                            color: $grayPrint;
                         }
                     }
                 }
@@ -256,7 +258,7 @@
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 30px;
-                    color: rgba(255, 255, 255, 0.6);
+                    color: $grayPrint;
                 }
             }
         }
