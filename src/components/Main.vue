@@ -1,266 +1,266 @@
 <template>
-    <div class="main_wrapper">
-        <div class="main_info">
-            <div class="main_info_header"> <span>Discover</span> Rare Collection of Digital Art <span>and</span> NFT</div>
-            <div class="main_info_description">Digital marketplace for crypto assets and non fungible tokens (NFT)</div>
-            <div class="main_info_gallery">
-                <div class="gallery_img">
-                    <div class="img_wrapper">
-                        <img src="@/assets/main1.png" alt="img">
-                    </div>
-                    <div class="img_wrapper">
-                        <img src="@/assets/main2.png" alt="img">
-                    </div>
-                    <div class="img_wrapper">
-                        <img src="@/assets/main3.png" alt="img">
-                    </div>
-                </div>
+    <section class="primary">
+        <div class="primary_info">
+            <h2 class="info_title"> <span class="info_subtitle">Discover</span> Rare Collection of Digital Art <span class="info_subtitle">and</span> NFT</h2>
+            <div class="info_description">Digital marketplace for crypto assets and non fungible tokens (NFT)</div>
+            <div class="info_gallery">
+                <ul class="gallery_pictures">
+                    <li v-for="img in imgs" :key="img"><img :src="img" alt="img"></li>
+                </ul>
                 <div class="gallery_description">
                     <div class="description_number">100+</div>
                     <div class="description_text">The best designers</div>
                 </div>
             </div>
-            <div class="main_info_details">
-                <div class="details_text">Discover latest Artworks</div>
-                <div class="details_arrow"></div>
-            </div>
+            <div class="info_details">Discover latest Artworks</div>
         </div>
-        <div class="main_gallery">
+        <div class="primary_gallery">
             <div class="gallery_card">
                 <div class="card_source">
                     <div class="card_source_collection">Troy Ape collection</div>
                     <div class="card_source_author">@tonyti</div>
                 </div>
-                <div class="img_wrapper">
-                    <img src="@/assets/monkey.png" alt="card">
-                </div>
+                <img :src="monkeyImg" alt="card" class="card_img">
                 <div class="card_info">
-                    <div class="card_time">
-                        <div class="card_time_main">23h : 41m : 11s </div>
-                        <div class="card_time_additional">Remaining time</div>
+                    <div class="info_time">
+                        <div class="time_main">23h : 41m : 11s </div>
+                        <div class="time_additional">Remaining time</div>
                     </div>
-                    <div class="card_cost">
-                        <div class="card_cost_main">23.09 ETH</div>
-                        <div class="card_cost_additional">Highest bid</div>
+                    <div class="info_cost">
+                        <div class="cost_main">23.09 ETH</div>
+                        <div class="cost_additional">Highest bid</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main_statistics">
-            <div class="statistics-item">
-                <div class="item_main_info">10.1k+</div>
-                <div class="item_additional_info">Art Work</div>
-            </div>
-            <div class="statistics-item">
-                <div class="item_main_info">1.1M</div>
-                <div class="item_additional_info">Artists</div>
-            </div>
-            <div class="statistics-item">
-                <div class="item_main_info">38k</div>
-                <div class="item_additional_info">Sales</div>
-            </div>
-        </div>
-    </div>
+        <ul class="primary_statistics_list">
+            <li class="statistics_list_item" v-for="listItem in listItems" :key="listItem">
+                <div class="item_main_info">{{ listItem.main }}</div>
+                <div class="item_additional_info">{{ listItem.additional }}</div>
+            </li>
+        </ul>
+    </section>
 </template>
 
-<style scoped>
 
-    .main_wrapper {
+<script setup>
+    import { reactive } from "vue";
+    import Img1 from '@/assets/main1.png';
+    import Img2 from '@/assets/main2.png';
+    import Img3 from '@/assets/main3.png';
+    import monkeyImg from '@/assets/monkey.png';
+    const imgs = reactive([Img1, Img2, Img3]);
+    const listItems = [
+        {
+            main: '10.1k+',
+            additional: 'Art Work'
+        },
+        {
+            main: '1.1M',
+            additional: 'Artists'
+        },
+        {
+            main: '38k',
+            additional: 'Sales'
+        },
+    ]
+
+</script>
+
+<style scoped lang="scss">
+
+    .primary {
         padding: 0 10% 10%;
         background-color: #131313;
         font-family: 'Arial';   
         color: #FFFFFF;
         display: flex;
         justify-content: space-between;
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            max-width: 400px;
+
+            .info_title {
+                font-weight: 700;
+                font-size: 55px;
+                line-height: 79px;
+                letter-spacing: 0.015em;
+
+                .info_subtitle {
+                    font-weight: 400;
+                    font-size: 55px;
+                    line-height: 63px;
+                }
+            }
+
+            .info_description {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 33px;
+            }
+
+            .info_gallery {
+                display: flex;
+                justify-content: space-between;
+
+                .gallery_pictures {
+                    display: flex;
+                    justify-content: space-between;
+                    list-style-type: none;
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    padding-inline-start: 0;
+                }
+
+                .gallery_description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .description_number {
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 33px;
+                    }
+
+                    .description_text {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+            }
+
+            .info_details {
+                position: relative;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 36%;
+            }
+            .info_details::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 37px;
+                    width: 63px;
+                    height: 2px;
+                    background-color: #5BA300;
+                }
+
+                .info_details::after {
+                    content: url(@/assets/arrow-right.png);
+                    display: inline-block;
+                    position: absolute;
+                    top: -7px;
+                    right: 75px;
+                }
+
+        }
+
+        &_gallery {
+            position: relative;
+            z-index: 2;
+
+            .gallery_card {
+                background-color: #131313;
+                border: 1px solid #5BA300;
+                padding: 31px 22px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+
+                .card_source {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &_collection {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+
+                    &_author {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+
+                .card_info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .info_time,
+                    .info_cost {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 4px;
+
+                        .time_main,
+                        .cost_main {
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 33px;
+                        }
+
+                        .time_additional,
+                        .cost_additional {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 27px;
+                            color: rgba(255, 255, 255, 0.6);
+                        }
+                    }
+                }
+            }
+
+            .gallery_card::after {
+                content: "";
+                display: inline-block;
+                top: 25px;
+                left: 42px;
+                position: absolute;
+                width: 445px;
+                height: 679px;
+                border: 1px solid #5BA300;
+                z-index: -1;
+            }
+
+        }
+
+        &_statistics_list {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            max-width: 130px;
+            justify-content: flex-end;
+
+            .statistics_list_item {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+
+                .item_main_info {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 41px;
+                }
+
+                .item_additional_info {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
     }
-
-    .main_info {
-        display: flex;
-        flex-direction: column;
-        gap: 42px;
-        max-width: 400px;
-    }
-
-    .main_info_header {
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 79px;
-        letter-spacing: 0.015em;
-    }
-
-    .main_info_description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 33px;
-    }
-
-    span {
-        font-weight: 400;
-        font-size: 55px;
-        line-height: 63px;
-    }
-
-    .main_info_gallery {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .gallery_img {
-        display: flex;
-    }
-
-    .gallery_description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .description_number {
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 33px;
-    }
-
-    .description_text {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .main_info_details {
-        position: relative;
-    }
-
-    .details_text {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 36%;
-    }
-
-    .details_text::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 37px;
-        width: 63px;
-        height: 2px;
-        background-color: #5BA300;
-    }
-
-    .details_text::after {
-        content: url(@/assets/arrow-right.png);
-        display: inline-block;
-        position: absolute;
-        top: -7px;
-        right: 75px;
-    }
-
-    .main_gallery {
-        position: relative;
-        z-index: 2;
-    }
-
-    .gallery_card {
-        background-color: #131313;
-        border: 1px solid #5BA300;
-        padding: 31px 22px;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-
-    }
-
-    .gallery_card::after {
-        content: "";
-        display: inline-block;
-        top: 25px;
-        left: 42px;
-        position: absolute;
-        width: 445px;
-        height: 679px;
-        border: 1px solid #5BA300;
-        z-index: -1;
-    }
-
-    .card_source {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .card_source_collection {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .card_source_author {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .card_info {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .card_time,
-    .card_cost {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 4px;
-    }
-
-    .card_time_main,
-    .card_cost_main {
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 33px;
-    }
-
-    .card_time_additional,
-    .card_cost_additional {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .main_statistics {
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
-        max-width: 130px;
-        justify-content: flex-end;
-    }
-
-    .statistics-item {
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    .item_main_info {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
-    }
-
-    .item_additional_info {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    
-
-
-  
-
 
 
 </style>

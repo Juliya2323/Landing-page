@@ -45,6 +45,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 63px;
+            list-style-type: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
 
             &_item {
               font-family: 'Arial';
@@ -54,7 +58,7 @@
               color: #FFFFFF;
               text-decoration: none;
             }
-          }
+      }
 
       &_container {
         display: flex;
@@ -64,13 +68,19 @@
       }
 
       &_download {
-          background-color: #5BA300;
-          padding: 14px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        background-color: #5BA300;
+        padding: 14px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
          
   

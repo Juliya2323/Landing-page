@@ -1,7 +1,7 @@
 <template>
-    <div class="header_logo_wrapper">
-            <img src="@/assets/Logo.png" alt="logo" class="header_logo">
-    </div>
+    <h1 class="header_logo_wrapper">
+        <a href="#"><img src="@/assets/Logo.png" alt="logo" class="header_logo"></a>
+    </h1>
 </template>
 
 <style scoped>
