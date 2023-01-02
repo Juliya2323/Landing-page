@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="header_wrapper">
-            <Logo></Logo>
+            <Logo class="header_logo"></Logo>
             <nav class="header_nav">
                 <ul class="header_nav_list">
                     <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_nav_list_item">{{ link }}</a></li>
@@ -83,5 +83,92 @@
       }
     }
          
+    
+    @media screen and (max-width: 1090px) {
+      .header {
+        padding: 70px 70px 80px 60px;
+
+          &_wrapper {
+            gap: 80px;
+          }
+
+          &_nav_list {
+            gap: 50px;
+          }
+
+          &_container {
+            gap: 28px;
+          }
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .header {
+        padding: 60px 60px 70px 50px;
+
+          &_wrapper {
+            gap: 70px;
+          }
+
+          &_nav_list {
+            gap: 40px;
+          }
+
+          &_container {
+            gap: 25px;
+          }
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      .transparent_button {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 760px) {
+      .header {
+        padding: 60px 60px 70px 50px;
+
+          &_nav_list_item {
+            font-size: 18px;
+          }
+
+          &_wrapper {
+            gap: 50px;
+          }
+
+          &_nav_list {
+            gap: 35px;
+          }
+
+          &_container {
+            gap: 25px;
+          }
+      }
+    }
+
+    @media screen and (max-width: 670px) {
+      .header {
+        padding: 50px 50px 60px 40px;
+
+          &_nav_list {
+            flex-direction: column;
+            gap: 15px;
+          }
+
+          &_wrapper {
+            gap: 40px;
+          }
+      }
+    }
+
+    @media screen and (max-width: 455px) {
+      .header_nav {
+        display: none;
+      }
+    }
+
+
   
 </style>

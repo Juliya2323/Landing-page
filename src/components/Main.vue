@@ -164,6 +164,9 @@
         }
 
         &_gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             z-index: 2;
 
@@ -264,5 +267,118 @@
         }
     }
 
+    @media screen and (max-width: 1390px) {
+        .primary_info {
+            max-width: 350px;
+        }
+
+        
+        .primary_gallery {
+            align-items: flex-end;
+
+            .card_img {
+                max-width: 350px;
+                height: auto;
+            }
+
+            .gallery_card::after {
+                top: 107px;
+                max-width: 396px;
+                max-height: 609px;
+            }
+        }
+
+        
+
+    }
+
+    @media screen and (max-width: 1165px) {
+        .primary {
+            flex-direction: column;
+            position: relative;
+            gap: 58px;
+            &_info {
+            min-width: 70%;
+            gap: 30px;
+
+                .info_title {
+                    margin: 5px 0;
+                }
+
+                .info_gallery {
+                    justify-content: flex-start;
+                    gap: 25px;
+                }
+
+                .info_details::after {
+                    right: 317px;
+                }
+            }
+
+            &_gallery {
+                justify-content: center;
+
+                .gallery_card::after {
+                    top: 40px;
+                    left: 220px;
+                    max-width: 396px;
+                    max-height: 609px;
+                }  
+            }
+
+            &_statistics_list {
+                position: absolute;
+                bottom: 56px;
+                left: 80px;
+                padding-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 1115px) {
+            .primary_info .info_details::after {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 820px) {
+            .primary {
+                gap: 100px;
+
+                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
+                    left: 172px;
+                }
+
+                &_statistics_list {
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: 0; 
+                    left: 0; 
+                }
+            }
+            
+        }
+
+        @media screen and (max-width: 714px) {
+            .primary {
+                gap: 90px;
+
+                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
+                    left: 118px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 632px) {
+            .primary {
+                gap: 90px;
+
+                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
+                    left: 98px;
+                }
+            }
+        }
+
+    }
 
 </style>
