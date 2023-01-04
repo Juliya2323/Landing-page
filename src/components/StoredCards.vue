@@ -1,12 +1,12 @@
 <template>
-    <div class="cards_wrapper">
+    <div class="cards_wrapper_action">
         <div class="cards_description">
             <div class="description_title">Auctions</div>
             <div class="description_subtitle">View all</div>
         </div>
         <div class="cards_container">
             <ul class="action_cards">
-                <GalleryCard 
+                <base-card  
                     v-for="ActionCard in ActionCards"
                     :key="ActionCard.id"
                     :id="ActionCard.id"
@@ -16,18 +16,18 @@
                     :edition="ActionCard.edition"
                     :price="ActionCard.price"
                     >
-                </GalleryCard>
+                </base-card>
             </ul>
         </div>
     </div>
-    <div class="cards_wrapper">
+    <div class="cards_wrapper_editor">
         <div class="cards_description">
             <div class="description_title">Editor’s Pick</div>
             <div class="description_subtitle">View all</div>
         </div>
         <div class="cards_container">
             <ul class="editor_cards">
-                <GalleryCard 
+                <base-card 
                     v-for="EditorCard in EditorCards"
                     :key="EditorCard.id"
                     :id="EditorCard.id"
@@ -37,14 +37,14 @@
                     :edition="EditorCard.edition"
                     :price="EditorCard.price"
                     >
-                </GalleryCard>
+                </base-card>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
-import GalleryCard from '@/components/GalleryCard.vue';
+
 import gallery1 from '@/assets/gallery1.png';
 import gallery2 from '@/assets/gallery2.png';
 import gallery3 from '@/assets/gallery3.png';
@@ -53,59 +53,59 @@ import gallery5 from '@/assets/gallery5.png';
 import gallery6 from '@/assets/gallery6.png';
     
 export default {
-components: {GalleryCard},
+    
     data() {
         return {
             ActionCards: [
             {
                 id: '1',
                 author: 'Mark Ross',
-                imgLink: this.gallery1,
+                imgLink: gallery1,
                 name: 'Silver Age Astronaut',
                 edition: 'Edition 1 of 5',
-                price: '1.5 ETH'
+                price: '1.5ETH'
             },
             {
                 id: '2',
                 author: 'Rose Edinburgh',
-                imgLink: this.gallery2,
+                imgLink: gallery2,
                 name: 'Mr Abstract',
                 edition: 'Edition 1 of 3',
-                price: '2.11 ETH'
+                price: '2.11ETH'
             },
             {
                 id: '3',
                 author: 'Eve Lillith',
-                imgLink: this.gallery3,
+                imgLink: gallery3,
                 name: 'Golden Cheetah',
                 edition: 'Edition 1 of 5',
-                price: '1.0 ETH'
+                price: '1.0ETH'
             },
             ],
             EditorCards: [
                 {
                     id: '4',
                     author: 'Mark Ross',
-                    imgLink: this.gallery4,
+                    imgLink: gallery4,
                     name: 'The Last Dream',
                     edition: 'Edition 1 of 5',
-                    price: '1.1 ETH'
+                    price: '1.1ETH'
                 },
                 {
                     id: '5',
                     author: 'Rose Edinburgh',
-                    imgLink: this.gallery5,
+                    imgLink: gallery5,
                     name: 'Old Man Paul',
                     edition: 'Only Edition',
-                    price: '2.1 ETH'
+                    price: '2.1ETH'
                 },
                 {
                     id: '6',
                     author: 'Eve Lillith',
-                    imgLink: this.gallery6,
+                    imgLink: gallery6,
                     name: 'Hand of god',
                     edition: 'Edition 1 of 2',
-                    price: '1.0 ETH'
+                    price: '1.0ETH'
                 },
             ]
         }
@@ -114,17 +114,26 @@ components: {GalleryCard},
 </script>
 
 <style scoped lang="scss">
-    .cards_wrapper {
+    .cards_wrapper_editor,
+    .cards_wrapper_action {
         background-color: #131313;
         font-family: 'Arial';   
         color: #FFFFFF;
         display: flex;
         flex-direction: column;
+        gap: 43px;
+        padding-bottom: 188px;
+        position: relative;
+
+        .cards_container {
+            z-index: 2;
+        }
 
         .cards_description {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 2;
 
             .description_title{
                 font-weight: 700;
@@ -156,5 +165,16 @@ components: {GalleryCard},
             padding: 0;
         }
 
+    }
+
+    .cards_wrapper_editor::before {
+        content: '';
+        background-color: #242424;
+        min-width: 3000px;
+        height: 330px;
+        position: absolute;
+        top: -90px;
+        left: -270px;
+        z-index: 1;
     }
 </style>

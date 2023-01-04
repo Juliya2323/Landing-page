@@ -1,7 +1,7 @@
 <template>
-  <TheHeader></TheHeader>
+  <the-header></the-header>
   <slot></slot>
-  <TheFooter class="footer">FOOTER</TheFooter>
+  <the-footer class="footer">FOOTER</the-footer>
 </template>
 
 <script setup>

@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="header_wrapper">
-            <BaseLogo class="header_logo"></BaseLogo>
+            <base-logo class="header_logo"></base-logo>
             <nav class="header_nav">
                 <ul class="header_nav_list">
                     <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_nav_list_item">{{ link }}</a></li>
@@ -10,7 +10,7 @@
         </div>
         <div class="header_container">
                 <img :src="Search" alt="search" class="header_search">
-                <BaseTransparentButton class="header_button"></BaseTransparentButton>
+                <base-tramsparent-button class="header_button"></base-tramsparent-button>
                 <img src="@/assets/arrow.png" alt="download" class="header_download">
         </div>
       </header>
@@ -19,8 +19,6 @@
 <script setup>
     import { reactive } from "vue";
     import Search from '@/assets/search.png';
-    import BaseLogo from '@/components/UI/BaseLogo.vue';
-    import BaseTransparentButton from '@/components/UI/BaseTransparentButton.vue';
     const links = reactive(['Discover', 'Marketplace', 'More']);
 
 </script>

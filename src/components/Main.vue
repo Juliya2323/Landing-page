@@ -1,6 +1,6 @@
 <template>
-    <PrimarySection></PrimarySection>
-    <GallerySection></GallerySection>
+    <primary-section></primary-section>
+    <gallery-section></gallery-section>
 </template>
 
 
