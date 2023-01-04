@@ -1,8 +1,7 @@
 <template>
     <section class="gallery">
         <div class="gallery_title">Trending</div>
-        <StoredCards class="actions"></StoredCards>
-        <StoredCards class="actions"></StoredCards>
+        <StoredCards></StoredCards>
     </section>
 </template>
 

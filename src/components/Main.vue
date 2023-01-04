@@ -6,10 +6,8 @@
 
 <script setup>
     
-    import PrimarySection from '@/components/Sections/PrimarySection.vue';
-    import GallerySection from '@/components/Sections/GallerySection.vue';
+    import PrimarySection from '@/components/sections/PrimarySection.vue';
+    import GallerySection from '@/components/sections/GallerySection.vue';
     
-    
-
 </script>
 
