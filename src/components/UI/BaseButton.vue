@@ -11,6 +11,15 @@
         font-size: 18px;
         color: #fff;
     }
+    
+    .base_button:hover {
+        background-color: #c1e19a;
+        border: 2px solid #fff;
+    }
+
+    .base_button:active {
+        background-color: #639a21;
+    }
 
     slot {
         padding: 0 0;
