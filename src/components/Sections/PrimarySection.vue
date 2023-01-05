@@ -44,10 +44,10 @@
 
 <script setup>
     import { reactive } from "vue";
-    import Img1 from '@/assets/main1.png';
-    import Img2 from '@/assets/main2.png';
-    import Img3 from '@/assets/main3.png';
-    import monkeyImg from '@/assets/monkey.png';
+    import Img1 from '@/assets/images/main1.png';
+    import Img2 from '@/assets/images/main2.png';
+    import Img3 from '@/assets/images/main3.png';
+    import monkeyImg from '@/assets/images/monkey.png';
     const imgs = reactive([Img1, Img2, Img3]);
     const listItems = [
         {
@@ -153,7 +153,7 @@
             }
 
             &_details::after {
-                content: url(@/assets/arrow-right.png);
+                content: url(@/assets/icons/arrow-right.svg);
                 display: inline-block;
                 position: absolute;
                 top: -7px;

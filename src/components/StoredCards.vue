@@ -45,12 +45,12 @@
 
 <script setup>
 import { reactive } from 'vue';
-import gallery1 from '@/assets/gallery1.png';
-import gallery2 from '@/assets/gallery2.png';
-import gallery3 from '@/assets/gallery3.png';
-import gallery4 from '@/assets/gallery4.png';
-import gallery5 from '@/assets/gallery5.png';
-import gallery6 from '@/assets/gallery6.png';
+import gallery1 from '@/assets/images/gallery1.png';
+import gallery2 from '@/assets/images/gallery2.png';
+import gallery3 from '@/assets/images/gallery3.png';
+import gallery4 from '@/assets/images/gallery4.png';
+import gallery5 from '@/assets/images/gallery5.png';
+import gallery6 from '@/assets/images/gallery6.png';
 import BaseCard from '@/components/UI/BaseCard.vue';
     
         
@@ -140,7 +140,7 @@ const editorCards = reactive([
             }
 
             &_subtitle::after{
-                content: url(@/assets/arrow-right.png);
+                content: url(@/assets/icons/arrow-right.svg);
                 position: absolute;
                 top: 4px;
                 left: 100px;

@@ -27,8 +27,8 @@
 
 <script setup>
 import { defineProps} from 'vue';
-import Icon from '@/assets/icon.png';
-import Status from '@/assets/status.png'; 
+import Icon from '@/assets/images/icon.png';
+import Status from '@/assets/icons/status.svg'; 
 
 const props = defineProps({
     'id': String,

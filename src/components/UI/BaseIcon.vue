@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-    import BaseIcon from '@/assets/BaseIcon.png';
+    import BaseIcon from '@/assets/icons/baseIcon.svg';
 </script>

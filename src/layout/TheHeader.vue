@@ -11,14 +11,15 @@
         <div class="header_container">
                 <img :src="Search" alt="search" class="header_container_search">
                 <base-tramsparent-button class="header_container_button"></base-tramsparent-button>
-                <img src="@/assets/arrow.png" alt="download" class="header_container_download">
+                <img :src="Download" alt="download" class="header_container_download">
         </div>
       </header>
 </template>
 
 <script setup>
     import { reactive } from "vue";
-    import Search from '@/assets/search.png';
+    import Search from '@/assets/icons/search.svg';
+    import Download from '@/assets/icons/arrow.svg';
     const links = reactive(['Discover', 'Marketplace', 'More']);
 
 </script>
