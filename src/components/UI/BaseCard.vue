@@ -1,26 +1,26 @@
 <template>
     <li class="gallery_card">
-        <div class="card_main">
-            <div class="main_info">
+        <div class="gallery_card_main">
+            <div class="gallery_card_main_info">
                 <img :src="icon" alt="icon">
-                <div class="info_title">{{author}}</div>
+                <div class="gallery_card_main_info_title">{{author}}</div>
             </div>
             <img :src="status" alt="status">
         </div>
-        <img :src="`${imgLink}`" alt="card_img" class="card_img">
-        <div class="card_description">
-            <div class="description_name">{{ name }}</div>
-            <div class="description_edition">{{ edition }}</div>
+        <img :src="`${imgLink}`" alt="card_img" class="gallery_card_img">
+        <div class="gallery_card_description">
+            <div class="gallery_card_description_name">{{ name }}</div>
+            <div class="gallery_card_description_edition">{{ edition }}</div>
         </div>
-        <div class="card_purchase">
-            <div class="purchase_price">
+        <div class="gallery_card_purchase">
+            <div class="gallery_card_purchase_price">
                 <base-icon></base-icon>
-                <div class="price_info">
-                    <div class="price_title">price</div>
-                    <div class="price_subtitle">{{price}}</div>
+                <div class="gallery_card_purchase_price_info">
+                    <div class="gallery_card_purchase_price_info_title">price</div>
+                    <div class="gallery_card_purchase_price_info_subtitle">{{price}}</div>
                 </div>
             </div>
-            <base-button class="purchase_button">Place a bid</base-button>
+            <base-button class="gallery_card_purchase_button">Place a bid</base-button>
         </div>
     </li>
 </template>
@@ -51,17 +51,18 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 25px;
-        .card_main {
+        
+        &_main {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .main_info {
+            &_info {
                 display: flex;
                 gap: 10px;
                 align-items: center;
 
-                .ingo_title {
+                &_title {
                     font-weight: 700;
                     font-size: 16.6127px;
                     line-height: 25px;
@@ -69,18 +70,18 @@ export default {
             }
         }
 
-        .card_description {
+        &_description {
             display: flex;
             gap: 4px;
             flex-direction: column;
 
-            .description_name {
+            &_name {
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 30px;
             }
 
-            .description_edition {
+            &_edition {
                 font-weight: 400;
                 font-size: 13px;
                 line-height: 19px;
@@ -88,36 +89,37 @@ export default {
             }
         }
 
-        .card_purchase {
+        &_purchase {
 
             display: flex;
             justify-content: space-between;
-            .purchase_button {
+
+            &_button {
                 padding: 12px 44px;
             }
 
-            .purchase_price {
+            &_price {
                 display: flex;
                 gap: 13px;
                 flex-grow: 1;
 
-                .price_info {
+                &_info {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
 
-                    .price_title {
-                        font-weight: 400;
-                        font-size: 11px;
-                        line-height: 16px;
-                        color: rgba(255, 255, 255, 0.6);
-                    }
+                &_title {
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 16px;
+                    color: rgba(255, 255, 255, 0.6);
+                }
 
-                    .price_subtitle {
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 27px;
-                    }
+                &_subtitle {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
                 }
             }
         }
