@@ -7,14 +7,14 @@
         <div class="cards_container">
             <ul class="cards_container_action_cards">
                 <base-card  
-                    v-for="ActionCard in ActionCards"
-                    :key="ActionCard.id"
-                    :id="ActionCard.id"
-                    :author="ActionCard.author"
-                    :imgLink="ActionCard.imgLink"
-                    :name="ActionCard.name"
-                    :edition="ActionCard.edition"
-                    :price="ActionCard.price"
+                    v-for="actionCard in actionCards"
+                    :key="actionCard.id"
+                    :id="actionCard.id"
+                    :author="actionCard.author"
+                    :imgLink="actionCard.imgLink"
+                    :name="actionCard.name"
+                    :edition="actionCard.edition"
+                    :price="actionCard.price"
                     >
                 </base-card>
             </ul>
@@ -28,14 +28,14 @@
         <div class="cards_container">
             <ul class="cards_container_editor_cards">
                 <base-card 
-                    v-for="EditorCard in EditorCards"
-                    :key="EditorCard.id"
-                    :id="EditorCard.id"
-                    :author="EditorCard.author"
-                    :imgLink="EditorCard.imgLink"
-                    :name="EditorCard.name"
-                    :edition="EditorCard.edition"
-                    :price="EditorCard.price"
+                    v-for="editorCard in editorCards"
+                    :key="editorCard.id"
+                    :id="editorCard.id"
+                    :author="editorCard.author"
+                    :imgLink="editorCard.imgLink"
+                    :name="editorCard.name"
+                    :edition="editorCard.edition"
+                    :price="editorCard.price"
                     >
                 </base-card>
             </ul>
@@ -44,16 +44,17 @@
 </template>
 
 <script setup>
-
+import { reactive } from 'vue';
 import gallery1 from '@/assets/gallery1.png';
 import gallery2 from '@/assets/gallery2.png';
 import gallery3 from '@/assets/gallery3.png';
 import gallery4 from '@/assets/gallery4.png';
 import gallery5 from '@/assets/gallery5.png';
 import gallery6 from '@/assets/gallery6.png';
+import BaseCard from '@/components/UI/BaseCard.vue';
     
         
-const ActionCards = [
+const actionCards = reactive([
     {
         id: '1',
         author: 'Mark Ross',
@@ -78,8 +79,8 @@ const ActionCards = [
         edition: 'Edition 1 of 5',
         price: '1.0 ETH'
     },
-]
-const EditorCards = [
+])
+const editorCards = reactive([
     {
         id: '4',
         author: 'Mark Ross',
@@ -104,7 +105,7 @@ const EditorCards = [
         edition: 'Edition 1 of 2',
         price: '1.0 ETH'
     },
-]
+])
         
     
 

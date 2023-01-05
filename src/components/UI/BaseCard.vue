@@ -2,10 +2,10 @@
     <li class="gallery_card">
         <div class="gallery_card_main">
             <div class="gallery_card_main_info">
-                <img :src="icon" alt="icon">
+                <img :src="Icon" alt="icon">
                 <div class="gallery_card_main_info_title">{{author}}</div>
             </div>
-            <img :src="status" alt="status">
+            <img :src="Status" alt="status">
         </div>
         <img :src="`${imgLink}`" alt="card_img" class="gallery_card_img">
         <div class="gallery_card_description">
@@ -25,20 +25,23 @@
     </li>
 </template>
 
-<script>
-
+<script setup>
+import { defineProps} from 'vue';
 import Icon from '@/assets/icon.png';
 import Status from '@/assets/status.png'; 
 
-export default {
-    props: ['id', 'author', 'imgLink', 'name', 'edition', 'price'],
-    data() {
-        return {
-            icon: Icon,
-            status: Status
-        }
-    }
-}
+const props = defineProps({
+    'id': String,
+    'author': String, 
+    'imgLink': String, 
+    'name': String,  
+    'edition': String, 
+    'price': String, 
+})
+
+   
+    
+
 
 </script>
 
@@ -51,7 +54,7 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 25px;
-        
+
         &_main {
             display: flex;
             justify-content: space-between;
