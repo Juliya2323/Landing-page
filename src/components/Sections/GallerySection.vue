@@ -1,4 +1,5 @@
 <template>
+    <div class="decoration"></div>
     <section class="gallery">
         <div class="gallery_title">Trending</div>
         <stored-cards></stored-cards>
@@ -29,5 +30,16 @@ import StoredCards from '@/components/StoredCards.vue';
             font-size: 24px;
             line-height: 36px;
        }
+    }
+
+    .decoration {
+        content: '';
+        background-color: #242424;
+        width: 100%;
+        height: 330px;
+        position: absolute;
+        top: 2100px;
+        left: 0px;
+        z-index: 1;
     }
 </style>

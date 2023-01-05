@@ -1,5 +1,5 @@
 <template>
-    <div class="cards_wrapper_action">
+    <div class="cards_wrapper">
         <div class="cards_description">
             <div class="description_title">Auctions</div>
             <div class="description_subtitle">View all</div>
@@ -20,7 +20,7 @@
             </ul>
         </div>
     </div>
-    <div class="cards_wrapper_editor">
+    <div class="cards_wrapper">
         <div class="cards_description">
             <div class="description_title">Editor’s Pick</div>
             <div class="description_subtitle">View all</div>
@@ -114,8 +114,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .cards_wrapper_editor,
-    .cards_wrapper_action {
+    .cards_wrapper {
         background-color: #131313;
         font-family: 'Arial';   
         color: #FFFFFF;
@@ -167,14 +166,5 @@ export default {
 
     }
 
-    .cards_wrapper_editor::before {
-        content: '';
-        background-color: #242424;
-        min-width: 3000px;
-        height: 330px;
-        position: absolute;
-        top: -90px;
-        left: -270px;
-        z-index: 1;
-    }
+    
 </style>
