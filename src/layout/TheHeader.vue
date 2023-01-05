@@ -10,7 +10,7 @@
         </div>
         <div class="header_container">
                 <img :src="Search" alt="search" class="header_container_search">
-                <base-tramsparent-button class="header_container_button"></base-tramsparent-button>
+                <base-transparent-button class="header_container_button"></base-transparent-button>
                 <img :src="Download" alt="download" class="header_container_download">
         </div>
       </header>

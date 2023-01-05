@@ -7,7 +7,7 @@
             </div>
             <img :src="Status" alt="status">
         </div>
-        <img :src="`${imgLink}`" alt="card_img" class="gallery_card_img">
+        <img :src="imgLink" alt="card_img" class="gallery_card_img">
         <div class="gallery_card_description">
             <div class="gallery_card_description_name">{{ name }}</div>
             <div class="gallery_card_description_edition">{{ edition }}</div>

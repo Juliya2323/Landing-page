@@ -1,7 +1,7 @@
 <template>
     <div class="cards">
         <div class="cards_description">
-            <div class="cards_description_title">Auctions</div>
+            <div class="cards_description_title">Actions</div>
             <div class="cards_description_subtitle">View all</div>
         </div>
         <div class="cards_container">
@@ -39,7 +39,7 @@
                     >
                 </base-card>
             </ul>
-        </div>
+    </div>
     </div>
 </template>
 
