@@ -1,11 +1,11 @@
 <template>
-    <div class="cards_wrapper">
+    <div class="cards">
         <div class="cards_description">
-            <div class="description_title">Auctions</div>
-            <div class="description_subtitle">View all</div>
+            <div class="cards_description_title">Auctions</div>
+            <div class="cards_description_subtitle">View all</div>
         </div>
         <div class="cards_container">
-            <ul class="action_cards">
+            <ul class="cards_container_action_cards">
                 <base-card  
                     v-for="ActionCard in ActionCards"
                     :key="ActionCard.id"
@@ -20,13 +20,13 @@
             </ul>
         </div>
     </div>
-    <div class="cards_wrapper">
+    <div class="cards">
         <div class="cards_description">
-            <div class="description_title">Editor’s Pick</div>
-            <div class="description_subtitle">View all</div>
+            <div class="cards_description_title">Editor’s Pick</div>
+            <div class="cards_description_subtitle">View all</div>
         </div>
         <div class="cards_container">
-            <ul class="editor_cards">
+            <ul class="cards_container_editor_cards">
                 <base-card 
                     v-for="EditorCard in EditorCards"
                     :key="EditorCard.id"
@@ -114,26 +114,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .cards_wrapper {
+    .cards {
         background-color: #131313;
         font-family: 'Arial';   
         color: #FFFFFF;
         display: flex;
         flex-direction: column;
         gap: 43px;
-        padding-bottom: 188px;
+        padding-bottom: 150px;
 
-        .cards_description {
+        &_description {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .description_title{
+            &_title{
                 font-weight: 700;
                 font-size: 36px;
                 line-height: 54px;
             }
-            .description_subtitle{
+            &_subtitle{
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 36px;
@@ -141,7 +141,7 @@ export default {
                 position: relative;
             }
 
-            .description_subtitle::after{
+            &_subtitle::after{
                 content: url(@/assets/arrow-right.png);
                 position: absolute;
                 top: 4px;
@@ -149,8 +149,8 @@ export default {
             }
         }
 
-        .editor_cards,
-        .action_cards {
+        &_container_action_cards,
+        &_container_editor_cards {
             display: flex;
             justify-content: space-between;
             list-style-type: none;
