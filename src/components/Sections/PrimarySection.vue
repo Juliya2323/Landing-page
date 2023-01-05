@@ -1,42 +1,42 @@
 <template>
     <section class="primary">
         <div class="primary_info">
-            <h2 class="info_title"> <span class="info_subtitle">Discover</span> Rare Collection of Digital Art <span class="info_subtitle">and</span> NFT</h2>
-            <div class="info_description">Digital marketplace for crypto assets and non fungible tokens (NFT)</div>
-            <div class="info_gallery">
-                <ul class="gallery_pictures">
+            <h2 class="primary_info_title"> <span class="primary_info_subtitle">Discover</span> Rare Collection of Digital Art <span class="primary_info_subtitle">and</span> NFT</h2>
+            <div class="primary_info_description">Digital marketplace for crypto assets and non fungible tokens (NFT)</div>
+            <div class="primary_info_gallery">
+                <ul class="primary_info_gallery_pictures">
                     <li v-for="img in imgs" :key="img"><img :src="img" alt="img"></li>
                 </ul>
-                <div class="gallery_description">
-                    <div class="description_number">100+</div>
-                    <div class="description_text">The best designers</div>
+                <div class="primary_info_gallery_description">
+                    <div class="primary_info_gallery_description_number">100+</div>
+                    <div class="primary_info_gallery_description_text">The best designers</div>
                 </div>
             </div>
-            <div class="info_details">Discover latest Artworks</div>
+            <div class="primary_info_details">Discover latest Artworks</div>
         </div>
         <div class="primary_gallery">
-            <div class="gallery_card">
-                <div class="card_source">
-                    <div class="card_source_collection">Troy Ape collection</div>
-                    <div class="card_source_author">@tonyti</div>
+            <div class="primary_gallery_card">
+                <div class="primary_gallery_card_source">
+                    <div class="primary_gallery_card_source_collection">Troy Ape collection</div>
+                    <div class="primary_gallery_card_source_author">@tonyti</div>
                 </div>
-                <img :src="monkeyImg" alt="card" class="card_img">
-                <div class="card_info">
-                    <div class="info_time">
-                        <div class="time_main">23h : 41m : 11s </div>
-                        <div class="time_additional">Remaining time</div>
+                <img :src="monkeyImg" alt="card" class="primary_gallery_card_img">
+                <div class="primary_gallery_card_info">
+                    <div class="primary_gallery_card_info_time">
+                        <div class="primary_gallery_card_info_time_main">23h : 41m : 11s </div>
+                        <div class="primary_gallery_card_info_time_additional">Remaining time</div>
                     </div>
-                    <div class="info_cost">
-                        <div class="cost_main">23.09 ETH</div>
-                        <div class="cost_additional">Highest bid</div>
+                    <div class="primary_gallery_card_info_cost">
+                        <div class="primary_gallery_card_info_cost_main">23.09 ETH</div>
+                        <div class="primary_gallery_card_info_cost_additional">Highest bid</div>
                     </div>
                 </div>
             </div>
         </div>
         <ul class="primary_statistics_list">
-            <li class="statistics_list_item" v-for="listItem in listItems" :key="listItem">
-                <div class="item_main_info">{{ listItem.main }}</div>
-                <div class="item_additional_info">{{ listItem.additional }}</div>
+            <li class="primary_statistics_list_item" v-for="listItem in listItems" :key="listItem">
+                <div class="primary_statistics_list_item_main_info">{{ listItem.main }}</div>
+                <div class="primary_statistics_list_item_additional_info">{{ listItem.additional }}</div>
             </li>
         </ul>
     </section>
@@ -83,30 +83,30 @@
             gap: 42px;
             max-width: 400px;
 
-            .info_title {
+            &_title {
                 font-weight: 700;
                 font-size: 55px;
                 line-height: 79px;
                 letter-spacing: 0.015em;
+            }
 
-                .info_subtitle {
+            &_subtitle {
                     font-weight: 400;
                     font-size: 55px;
                     line-height: 63px;
                 }
-            }
 
-            .info_description {
+            &_description {
                 font-weight: 400;
                 font-size: 22px;
                 line-height: 33px;
             }
 
-            .info_gallery {
+            &_gallery {
                 display: flex;
                 justify-content: space-between;
 
-                .gallery_pictures {
+                &_pictures {
                     display: flex;
                     justify-content: space-between;
                     list-style-type: none;
@@ -115,18 +115,18 @@
                     padding-inline-start: 0;
                 }
 
-                .gallery_description {
+                &_description {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
 
-                    .description_number {
+                    &_number {
                         font-weight: 700;
                         font-size: 22px;
                         line-height: 33px;
                     }
 
-                    .description_text {
+                    &_text {
                         font-weight: 400;
                         font-size: 18px;
                         line-height: 27px;
@@ -135,13 +135,14 @@
                 }
             }
 
-            .info_details {
+            &_details {
                 position: relative;
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 36%;
             }
-            .info_details::before {
+
+            &_details::before {
                     content: "";
                     display: inline-block;
                     position: absolute;
@@ -149,15 +150,15 @@
                     width: 63px;
                     height: 2px;
                     background-color: #5BA300;
-                }
+            }
 
-                .info_details::after {
-                    content: url(@/assets/arrow-right.png);
-                    display: inline-block;
-                    position: absolute;
-                    top: -7px;
-                    right: 75px;
-                }
+            &_details::after {
+                content: url(@/assets/arrow-right.png);
+                display: inline-block;
+                position: absolute;
+                top: -7px;
+                right: 75px;
+            }
 
         }
 
@@ -168,7 +169,7 @@
             position: relative;
             z-index: 2;
 
-            .gallery_card {
+            &_card {
                 background-color: #131313;
                 border: 1px solid #5BA300;
                 padding: 31px 22px;
@@ -176,7 +177,7 @@
                 flex-direction: column;
                 gap: 14px;
 
-                .card_source {
+                &_source {
                     display: flex;
                     justify-content: space-between;
 
@@ -194,36 +195,36 @@
                     }
                 }
 
-                .card_info {
+                &_info {
                     display: flex;
                     justify-content: space-between;
 
-                    .info_time,
-                    .info_cost {
+                    &_time,
+                    &_cost {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         gap: 4px;
 
-                        .time_main,
-                        .cost_main {
+                        &_main {
                             font-weight: 400;
                             font-size: 22px;
                             line-height: 33px;
                         }
 
-                        .time_additional,
-                        .cost_additional {
+                        &_additional {
                             font-weight: 400;
                             font-size: 18px;
                             line-height: 27px;
                             color: $grayPrint;
                         }
                     }
+
+                
                 }
             }
 
-            .gallery_card::after {
+            &_card::after {
                 content: "";
                 display: inline-block;
                 top: 25px;
@@ -235,6 +236,8 @@
                 z-index: -1;
             }
 
+            
+
         }
 
         &_statistics_list {
@@ -244,18 +247,18 @@
             max-width: 130px;
             justify-content: flex-end;
 
-            .statistics_list_item {
+            &_item {
                 display: flex;
                 flex-direction: column;
                 gap: 9px;
 
-                .item_main_info {
+                &_main_info {
                     font-weight: 700;
                     font-size: 36px;
                     line-height: 41px;
                 }
 
-                .item_additional_info {
+                &_additional_info {
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 30px;
@@ -266,117 +269,30 @@
     }
 
     @media screen and (max-width: 1390px) {
-        .primary_info {
-            max-width: 350px;
-        }
-
-        
-        .primary_gallery {
-            align-items: flex-end;
-
-            .card_img {
-                max-width: 350px;
-                height: auto;
-            }
-
-            .gallery_card::after {
-                top: 107px;
-                max-width: 396px;
-                max-height: 609px;
-            }
-        }
-
-        
-
+     
     }
 
     @media screen and (max-width: 1165px) {
-        .primary {
-            flex-direction: column;
-            position: relative;
-            gap: 58px;
-            &_info {
-            min-width: 70%;
-            gap: 30px;
-
-                .info_title {
-                    margin: 5px 0;
-                }
-
-                .info_gallery {
-                    justify-content: flex-start;
-                    gap: 25px;
-                }
-
-                .info_details::after {
-                    right: 317px;
-                }
-            }
-
-            &_gallery {
-                justify-content: center;
-
-                .gallery_card::after {
-                    top: 40px;
-                    left: 220px;
-                    max-width: 396px;
-                    max-height: 609px;
-                }  
-            }
-
-            &_statistics_list {
-                position: absolute;
-                bottom: 56px;
-                left: 80px;
-                padding-left: 0;
-            }
-        }
-
-        @media screen and (max-width: 1115px) {
-            .primary_info .info_details::after {
-                display: none;
-            }
-        }
-
-        @media screen and (max-width: 820px) {
-            .primary {
-                gap: 100px;
-
-                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
-                    left: 172px;
-                }
-
-                &_statistics_list {
-                    position: relative;
-                    align-items: center;
-                    justify-content: center;
-                    bottom: 0; 
-                    left: 0; 
-                }
-            }
-            
-        }
-
-        @media screen and (max-width: 714px) {
-            .primary {
-                gap: 90px;
-
-                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
-                    left: 118px;
-                }
-            }
-        }
-
-        @media screen and (max-width: 632px) {
-            .primary {
-                gap: 90px;
-
-                .primary_gallery .gallery_card[data-v-3fa90f43]::after {
-                    left: 98px;
-                }
-            }
-        }
-
+        
     }
+
+    @media screen and (max-width: 1115px) {
+            
+    }
+
+    @media screen and (max-width: 820px) {
+            
+            
+    }
+
+    @media screen and (max-width: 714px) {
+            
+    }
+
+    @media screen and (max-width: 632px) {
+            
+    }
+
+    
 
 </style>

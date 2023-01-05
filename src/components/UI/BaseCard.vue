@@ -99,6 +99,7 @@ export default {
             .purchase_price {
                 display: flex;
                 gap: 13px;
+                flex-grow: 1;
 
                 .price_info {
                     display: flex;

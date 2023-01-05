@@ -1,17 +1,17 @@
 <template>
     <header class="header">
         <div class="header_wrapper">
-            <base-logo class="header_logo"></base-logo>
-            <nav class="header_nav">
-                <ul class="header_nav_list">
-                    <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_nav_list_item">{{ link }}</a></li>
+            <base-logo class="header_wrapper_logo"></base-logo>
+            <nav class="header_wrapper_nav">
+                <ul class="header_wrapper_nav_list">
+                    <li v-for="(link, index) in links" :key="index"><a :href="`#${link}`" class="header_wrapper_nav_list_item">{{ link }}</a></li>
                 </ul>
             </nav>
         </div>
         <div class="header_container">
-                <img :src="Search" alt="search" class="header_search">
-                <base-tramsparent-button class="header_button"></base-tramsparent-button>
-                <img src="@/assets/arrow.png" alt="download" class="header_download">
+                <img :src="Search" alt="search" class="header_container_search">
+                <base-tramsparent-button class="header_container_button"></base-tramsparent-button>
+                <img src="@/assets/arrow.png" alt="download" class="header_container_download">
         </div>
       </header>
 </template>
@@ -37,9 +37,14 @@
       &_wrapper {
           display: flex;
           gap: 100px;
-      }
 
-      &_nav_list {
+          
+        &_nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &_list {
             display: flex;
             flex-wrap: wrap;
             gap: 63px;
@@ -56,6 +61,11 @@
               color: #FFFFFF;
               text-decoration: none;
             }
+        }
+
+          
+      }
+
       }
 
       &_container {
@@ -63,22 +73,19 @@
         gap: 28px;
         justify-content: center;
         align-items: center;
+
+        &_download {
+          background-color: #5BA300;
+          padding: 14px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
       }
 
-      &_download {
-        background-color: #5BA300;
-        padding: 14px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &_nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+      
     }
          
     
@@ -125,46 +132,15 @@
     }
 
     @media screen and (max-width: 760px) {
-      .header {
-        padding: 60px 60px 70px 50px;
-
-          &_nav_list_item {
-            font-size: 18px;
-          }
-
-          &_wrapper {
-            gap: 50px;
-          }
-
-          &_nav_list {
-            gap: 35px;
-          }
-
-          &_container {
-            gap: 25px;
-          }
-      }
+      
     }
 
     @media screen and (max-width: 670px) {
-      .header {
-        padding: 50px 50px 60px 40px;
-
-          &_nav_list {
-            flex-direction: column;
-            gap: 15px;
-          }
-
-          &_wrapper {
-            gap: 40px;
-          }
-      }
+      
     }
 
     @media screen and (max-width: 455px) {
-      .header_nav {
-        display: none;
-      }
+      
     }
 
 

@@ -63,7 +63,7 @@ export default {
                 imgLink: gallery1,
                 name: 'Silver Age Astronaut',
                 edition: 'Edition 1 of 5',
-                price: '1.5ETH'
+                price: '1.5 ETH'
             },
             {
                 id: '2',
@@ -71,7 +71,7 @@ export default {
                 imgLink: gallery2,
                 name: 'Mr Abstract',
                 edition: 'Edition 1 of 3',
-                price: '2.11ETH'
+                price: '2.11 ETH'
             },
             {
                 id: '3',
@@ -79,7 +79,7 @@ export default {
                 imgLink: gallery3,
                 name: 'Golden Cheetah',
                 edition: 'Edition 1 of 5',
-                price: '1.0ETH'
+                price: '1.0 ETH'
             },
             ],
             EditorCards: [
@@ -89,7 +89,7 @@ export default {
                     imgLink: gallery4,
                     name: 'The Last Dream',
                     edition: 'Edition 1 of 5',
-                    price: '1.1ETH'
+                    price: '1.1 ETH'
                 },
                 {
                     id: '5',
@@ -97,7 +97,7 @@ export default {
                     imgLink: gallery5,
                     name: 'Old Man Paul',
                     edition: 'Only Edition',
-                    price: '2.1ETH'
+                    price: '2.1 ETH'
                 },
                 {
                     id: '6',
@@ -105,7 +105,7 @@ export default {
                     imgLink: gallery6,
                     name: 'Hand of god',
                     edition: 'Edition 1 of 2',
-                    price: '1.0ETH'
+                    price: '1.0 ETH'
                 },
             ]
         }
@@ -122,17 +122,11 @@ export default {
         flex-direction: column;
         gap: 43px;
         padding-bottom: 188px;
-        position: relative;
-
-        .cards_container {
-            z-index: 2;
-        }
 
         .cards_description {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 2;
 
             .description_title{
                 font-weight: 700;

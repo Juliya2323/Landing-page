@@ -1,11 +1,11 @@
 <template>
-  <Layout>
-    <Main></Main>
-  </Layout>
+  <the-layout>
+    <the-main></the-main>
+  </the-layout>
 </template>
 
 
 <script setup>
-import Layout from '@/layout/Layout.vue';
-import Main from '@/components/Main.vue';
+import TheLayout from '@/layout/TheLayout.vue';
+import TheMain from '@/components/TheMain.vue';
 </script>
