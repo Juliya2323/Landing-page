@@ -105,6 +105,8 @@
             &_gallery {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+                gap: 5px;
 
                 &_pictures {
                     display: flex;
@@ -268,29 +270,272 @@
         }
     }
 
-    @media screen and (max-width: 1390px) {
-     
+    @media screen and (max-width: 1336px) {
+        .primary_info {
+            max-width: 350px;
+        }
+
+        .primary_gallery {
+            align-items: flex-end;
+        }
+
+        .primary_gallery_card::after {
+            top: 78px;
+        }
+
+        .primary_info_details::after {
+            right: 30px;
+        }
     }
 
-    @media screen and (max-width: 1165px) {
+    @media screen and (max-width: 1230px) {
+        .primary_gallery_card::after {
+            left: 20px;
+            top: 96px;
+        }
+
+        .primary_info {
+            max-width: 300px;
+
+            &_title {
+                font-size: 51px;
+                line-height: 65px;
+            }
+
+            &_details::after {
+                right: -6px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1185px) {
+
+        .primary_info_title {
+            margin: 0;
+        }
+
+        .primary_gallery_card::after {
+            top: 17px;
+        }
+
         
     }
 
-    @media screen and (max-width: 1115px) {
+    @media screen and (max-width: 1163px) {
+        .primary_gallery_card_img {
+            width: 290px;
+            height: auto;
+        }
+
+        .primary_gallery_card::after {
+            top: 151px;
+            width: 336px;
+            height: 537px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .primary_info {
+            max-width: 260px;
+
+            &__title {
+                font-size: 30px;
+                line-height: 56px;
+
+                &_subtitle {
+                    font-size: 30px;
+                }
+            }
+
+            &_details {
+                line-height: 115%;
+            }
+
+            &_details::after {
+                display: none;
+            }
+
+            &_details::before {
+                top: -12px;
+            }
+
+            &_gallery {
+                justify-content: space-around;
+            }
+
+            &_gallery_pictures {
+                flex-direction: column;
+            }
+        }
+        
+        .primary_gallery_card::after {
+            top: 310px;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 930px) {
+        .primary {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            &_info {
+                max-width: 300px;
+
+                &_gallery_pictures {
+                    flex-direction: row;
+                }
+            }
+
+            &_gallery {
+                align-items: flex-start;
+
+                &_card::after {
+                    top: 24px;
+                }
+            }
+
+            &_statistics_list {
+                flex-direction: row;
+                justify-content: center;
+                margin: 20px 0;
+                padding: 0;
+                gap: 33px;
+                max-width: 100%;
+            }
+        }
             
     }
 
     @media screen and (max-width: 820px) {
-            
-            
+        .primary {
+            gap: 35px;
+
+            &_info {
+                max-width: 600px;
+
+                &_gallery {
+                    justify-content: flex-start;
+                    gap: 50px;
+                }
+            }
+
+            &_gallery_card::after {
+                top: 21px;
+            }
+
+            &_statistics_list {
+                flex-direction: column;
+                justify-content: flex-end;
+                margin: 0;
+                gap: 33px;
+                max-width: 100%;
+            }
+        }
     }
 
-    @media screen and (max-width: 714px) {
-            
+    @media screen and (max-width: 602px) {
+        .primary_statistics_list {
+            flex-direction: row;
+            padding-top: 30px;
+        }
     }
 
-    @media screen and (max-width: 632px) {
-            
+    @media screen and (max-width: 426px) {
+
+        .primary_info_gallery {
+            gap: 30px;
+        }
+        .primary_gallery_card_img {
+            width: 220px;
+        }
+
+        .primary_gallery_card::after {
+            width: 301px;
+            height: 452px;
+            top: 21px;
+        }
+    }
+
+    @media screen and (max-width: 381px) {
+
+        .primary_info {
+            max-width: 250px;
+
+            &_title {
+                font-size: 45px;
+                line-height: 50px;
+            }
+
+            &_subtitle {
+                font-size: 45px;
+                line-height: 50px;
+            }
+
+            &_gallery {
+                gap: 25px;
+            }
+
+            &_gallery {
+                flex-wrap: wrap;
+            }
+        }
+
+        
+
+        .primary_gallery_card {
+            padding: 25px 18px;
+            gap: 12px;
+
+            &_img {
+                width: 210px;
+            }
+
+            &_source_collection {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &_source_author {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            &_info_time_main, 
+            &_info_cost_main {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &_info_time_additional, 
+            &_info_cost_additional {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+        
+
+        .primary_gallery_card::after {
+            width: 248px;
+            height: 394px;
+            top: 21px;
+            left: 6px;
+        }
+
+        .primary_statistics_list {
+            gap: 22px;
+
+            &_item_main_info {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+
+        
     }
 
     
