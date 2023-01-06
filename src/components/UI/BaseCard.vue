@@ -128,5 +128,20 @@ const props = defineProps({
         }
     }
 
+    @media screen and (max-width: 1425px) {
+        .gallery_card_img {
+            width: 280px;
+            height: auto;
+        }
+
+        .gallery_card_purchase_button {
+            padding: 12px 20px;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+
+    }
+
     
 </style>

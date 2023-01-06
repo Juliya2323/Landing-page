@@ -158,5 +158,31 @@ const editorCards = reactive([
 
     }
 
+    @media screen and (max-width: 1425px) {
+        .cards_container_action_cards,
+        .cards_container_editor_cards {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    @media screen and (max-width: 1300px) {
+        .cards {
+            gap: 35px;
+            padding-bottom: 110px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .cards_container_action_cards,
+        .cards_container_editor_cards {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+
+    }
+
     
 </style>
