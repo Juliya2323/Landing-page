@@ -38,7 +38,6 @@
       &_wrapper {
           display: flex;
           gap: 100px;
-
           
         &_nav {
           display: flex;
@@ -113,11 +112,11 @@
         padding: 60px 60px 70px 50px;
 
           &_wrapper {
-            gap: 70px;
-          }
+            gap: 65px;
 
-          &_nav_list {
+            &_nav_list {
             gap: 40px;
+          }
           }
 
           &_container {
@@ -133,15 +132,42 @@
     }
 
     @media screen and (max-width: 760px) {
-      
+      .header_wrapper {
+        gap: 40px;
+      }
+
+      .header_wrapper_nav_list {
+        flex-direction: column;
+        gap: 30px;
+      }
     }
 
-    @media screen and (max-width: 670px) {
-      
+    @media screen and (max-width: 507px) {
+        .header_wrapper_nav_list {
+          display:none;
+          position: relative;
+        }
+
+        .header_wrapper_logo {
+          position: relative;
+          margin-left: 60px;
+        }
+        .header_wrapper_logo::before {
+          content: url('@/assets/icons/burger.svg');
+          position: absolute;
+          left: -52px;
+          top: 3px;
+        }
     }
 
     @media screen and (max-width: 455px) {
-      
+      .header_container_download[data-v-7916d1c0] {
+        display: none;
+      }
+
+      .header {
+          padding: 50px 60px 60px 30px;
+      }
     }
 
 

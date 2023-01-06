@@ -30,6 +30,8 @@ import imgLink8 from '@/assets/images/item8.png';
 import imgLink9 from '@/assets/images/item9.png';
 import { reactive } from 'vue';
 
+
+
 const items = reactive([
     {
         id: '1',
