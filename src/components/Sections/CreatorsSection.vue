@@ -122,4 +122,25 @@ const items = reactive([
             margin-top: 70px;
         }
     }
+
+    @media screen and (max-width: 934px) {
+        .creators_board_list {
+        justify-content: center;
+        max-height: 500px;
+        overflow-x: scroll;
+    }
+    }
+
+    @media screen and (max-width: 566px) {
+        .creators {
+            padding: 10px 7% 90px;
+
+            &_button {
+                margin-top: 20px;
+            }
+        }
+    }
+    
+
+
 </style>

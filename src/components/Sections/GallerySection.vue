@@ -35,7 +35,13 @@ import StoredCards from '@/components/StoredCards.vue';
         .gallery {
             padding: 29px 7% 90px;
         }
-    }       
+    }   
+    
+    @media screen and (max-width: 934px) {
+        .gallery {
+            padding-bottom: 0;
+        }
+    }
 
     
 </style>

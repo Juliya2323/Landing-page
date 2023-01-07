@@ -84,4 +84,44 @@ const props = defineProps({
 
         
     }
+
+    @media screen and (max-width: 1063px) {
+        .item {
+            padding: 18px 30px 18px 7px;
+            gap: 18px;
+            .item_info_title {
+                min-width: 220px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .item {
+            padding: 18px 10px;
+            gap: 20px;
+            .item_info_title {
+                width: 230px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 366px) {
+        .item_info_title {
+            width: 200px;
+
+            &_name {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            
+            &_button {
+                padding: 9px 15px;
+            }
+    
+        }
+    }
+    
+    
+
 </style>
