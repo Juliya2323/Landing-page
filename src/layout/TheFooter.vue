@@ -72,8 +72,10 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
   background-color: #242424;
 
   &_main {
-    padding: 73px 10% 75px;
+    padding: 43px 7%;
     display: flex;
+    gap: 35px;
+    flex-direction: column;
     justify-content: space-between;
     font-family: "Arial";
     font-style: normal;
@@ -82,23 +84,23 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     &_nav {
       display: flex;
       justify-content: space-between;
-      gap: 45px;
+      gap: 20px;
 
       &_logo {
         border-right: 1px solid #333333;
-        padding-right: 91px;
+        padding-right: 20px;
         margin: 0;
       }
 
       &_content {
         display: flex;
         flex-direction: column;
-        gap: 37px;
-        padding-left: 61px;
+        gap: 32px;
+        padding-left: 5px;
 
         &_title {
           font-weight: 700;
-          font-size: 32px;
+          font-size: 26px;
           line-height: 37px;
         }
 
@@ -106,15 +108,14 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
           list-style: none;
           display: flex;
           flex-direction: column;
-          gap: 51px;
-          max-height: 185px;
-          flex-wrap: wrap;
+          gap: 20px;
+          overflow-y: hidden;;
           margin: 0;
           padding: 0;
 
           &_item_link {
             font-weight: 400;
-            font-size: 22px;
+            font-size: 18px;
             line-height: 25px;
             color: #ffffff;
             text-decoration: none;
@@ -126,29 +127,30 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     &_subscription {
       display: flex;
       flex-direction: column;
-      gap: 38px;
-      width: 495px;
+      gap: 20px;
+      align-items: flex-start;
 
       &_title {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 26px;
         line-height: 37px;
       }
 
       &_description {
         font-weight: 400;
-        font-size: 22px;
-        line-height: 29px;
+        font-size: 16px;
+        line-height: 20px;
       }
 
       &_input {
         display: flex;
-        overflow: hidden;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
 
         &_field {
           display: block;
-          width: 100%;
-          padding: 22px 39px;
+          padding: 18px 26px;
           background-color: #131313;
           border: none;
           font-weight: 400;
@@ -160,7 +162,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
         &_button {
           display: block;
           float: right;
-          padding: 22px 39px;
+          padding: 18px 26px;
           font-weight: 400;
           font-size: 20px;
           line-height: 23px;
@@ -170,11 +172,12 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
   }
 
   &_additional {
-    padding: 29px 10% 37px;
+    padding: 29px 7%;
     border-top: 1px solid #333333;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 16px;
 
     &_info {
       font-weight: 700;
@@ -187,7 +190,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 36px;
+      gap: 12px;
       list-style: none;
       margin: 0;
       padding: 0;

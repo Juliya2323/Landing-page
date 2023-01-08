@@ -61,7 +61,7 @@ const thirdLineImgs = [imgLink5, imgLink6];
 
 <style scoped lang="scss">
 .join {
-  padding: 30px 25% 232px;
+  padding: 20px 7% 80px;
   background-color: #131313;
   font-family: "Arial";
   font-style: normal;
@@ -71,6 +71,7 @@ const thirdLineImgs = [imgLink5, imgLink6];
   &_sections {
     list-style: none;
     display: flex;
+    gap: 30px;
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -79,6 +80,10 @@ const thirdLineImgs = [imgLink5, imgLink6];
       display: flex;
       justify-content: space-around;
 
+      &_img {
+        display: none;
+      }
+
       &_info {
         display: flex;
         flex-direction: column;
@@ -86,14 +91,14 @@ const thirdLineImgs = [imgLink5, imgLink6];
 
         &_title {
           font-weight: 400;
-          font-size: 36px;
+          font-size: 32px;
           line-height: 41px;
           margin-bottom: 5px;
         }
 
         &_subtitle {
           font-weight: 700;
-          font-size: 36px;
+          font-size: 32px;
           line-height: 41px;
           color: #5ba300;
           margin-bottom: 31px;
@@ -101,17 +106,17 @@ const thirdLineImgs = [imgLink5, imgLink6];
 
         &_description {
           font-weight: 400;
-          font-size: 22px;
-          line-height: 29px;
+          font-size: 19px;
+          line-height: 27px;
           width: 70%;
           text-align: center;
-          margin-bottom: 67px;
+          margin-bottom: 50px;
         }
 
         &_button {
           display: flex;
           align-items: center;
-          padding: 20px 29px;
+          padding: 17px 21px;
           gap: 12px;
 
           &_text {
