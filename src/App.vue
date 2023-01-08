@@ -4,7 +4,7 @@
 
 
 <script setup>
-import HeroPage from "@/pages/HeroPage.vue";
+import HeroPage from "@/pages/hero-page/index.vue";
 </script>
 
 

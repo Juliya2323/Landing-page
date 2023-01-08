@@ -1,5 +1,5 @@
+import '@/assets/styles/index.css';
 import { createApp } from 'vue';
-import './style.css';
 import App from './App.vue';
 import BaseLogo from '@/components/UI/BaseLogo.vue';
 import BaseTransparentButton from '@/components/UI/BaseTransparentButton.vue';

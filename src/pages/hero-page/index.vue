@@ -6,6 +6,6 @@
 
 
 <script setup>
-import TheLayout from '@/layout/TheLayout.vue';
+import TheLayout from '@/layout/the-layout/index.vue';
 import TheMain from '@/components/TheMain.vue';
 </script>

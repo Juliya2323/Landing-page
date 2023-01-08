@@ -7,9 +7,9 @@
 
 
 <script setup>
-    import PrimarySection from '@/components/sections/PrimarySection.vue';
-    import GallerySection from '@/components/sections/GallerySection.vue';
-    import CreatorsSection from '@/components/sections/CreatorsSection.vue';
-    import JoinSection from '@/components/sections/JoinSection.vue';
+    import PrimarySection from '@/components/sections/primary-section/index.vue';
+    import GallerySection from '@/components/sections/gallery-section/index.vue';
+    import CreatorsSection from '@/components/sections/creators-section/index.vue';
+    import JoinSection from '@/components/sections/join-section/index.vue';
 </script>
 

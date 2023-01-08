@@ -8,7 +8,7 @@
 
 
 <script setup>
-import StoredCards from '@/components/StoredCards.vue';
+import StoredCards from '@/components/sections/gallery-section/StoredCards.vue';
 
 </script>
 
