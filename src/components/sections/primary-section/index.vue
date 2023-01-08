@@ -92,30 +92,35 @@ const listItems = [
 $grayPrint: rgba(255, 255, 255, 0.6);
 
 .primary {
-  padding: 0 10% 10%;
+  padding: 20px 7% 10%;
   background-color: #131313;
   font-family: "Arial";
   color: #ffffff;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
+
+  
 
   &_info {
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 22px;
     max-width: 400px;
 
     &_title {
       font-weight: 700;
-      font-size: 55px;
-      line-height: 79px;
+      font-size: 42px;
+      line-height: 55px;
       letter-spacing: 0.015em;
+      margin: 0;
     }
 
     &_subtitle {
       font-weight: 400;
-      font-size: 55px;
-      line-height: 63px;
+      font-size: 42px;
+      line-height: 49px;
     }
 
     &_description {
@@ -128,7 +133,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 5px;
+      gap: 20px;
 
       &_pictures {
         display: flex;
@@ -152,8 +157,8 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
         &_text {
           font-weight: 400;
-          font-size: 18px;
-          line-height: 27px;
+          font-size: 14px;
+          line-height: 17px;
           color: $grayPrint;
         }
       }
@@ -162,15 +167,15 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     &_details {
       position: relative;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 36%;
+      font-size: 22px;
+      line-height: 38%;
     }
 
     &_details::before {
       content: "";
       display: inline-block;
       position: absolute;
-      top: 37px;
+      top: 28px;
       width: 63px;
       height: 2px;
       background-color: #5ba300;
@@ -178,7 +183,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
     &_details::after {
       content: url(@/assets/icons/arrow-right.svg);
-      display: inline-block;
+      display: none;
       position: absolute;
       top: -7px;
       right: 75px;
@@ -195,10 +200,15 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     &_card {
       background-color: #131313;
       border: 1px solid #5ba300;
-      padding: 31px 22px;
+      padding: 27px 18px;
       display: flex;
       flex-direction: column;
       gap: 14px;
+
+      &_img {
+        width: 260px;
+        height: auto;
+      }
 
       &_source {
         display: flex;
@@ -206,13 +216,13 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
         &_collection {
           font-weight: 700;
-          font-size: 20px;
+          font-size: 17px;
           line-height: 30px;
         }
 
         &_author {
           font-weight: 400;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 27px;
           color: $grayPrint;
         }
@@ -231,13 +241,13 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
           &_main {
             font-weight: 400;
-            font-size: 22px;
+            font-size: 17px;
             line-height: 33px;
           }
 
           &_additional {
             font-weight: 400;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 27px;
             color: $grayPrint;
           }
@@ -248,11 +258,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     &_card::after {
       content: "";
       display: inline-block;
-      top: 25px;
-      left: 42px;
+      top: 13px;
+      left: 10px;
       position: absolute;
-      width: 445px;
-      height: 679px;
+      width: 298px;
+      height: 493px;
       border: 1px solid #5ba300;
       z-index: -1;
     }
@@ -260,10 +270,10 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
   &_statistics_list {
     display: flex;
-    flex-direction: column;
-    gap: 36px;
-    max-width: 130px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
 
     &_item {
       display: flex;
@@ -272,17 +282,19 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
       &_main_info {
         font-weight: 700;
-        font-size: 36px;
-        line-height: 41px;
+        font-size: 30px;
+        line-height: 29px;
       }
 
       &_additional_info {
         font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 17px;
+        line-height: 26px;
         color: $grayPrint;
       }
     }
   }
 }
+
+
 </style>

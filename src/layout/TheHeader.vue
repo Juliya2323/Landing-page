@@ -3,7 +3,7 @@
     <div class="header_wrapper">
       <base-logo class="header_wrapper_logo"></base-logo>
       <button class="header_wrapper_button" v-on:click="switchNav">
-        <img :src="Burger" alt="burger_button"/>
+        <img :src="Burger" alt="burger_button" />
       </button>
       <nav class="header_wrapper_nav" :class="{ open: isOpen }">
         <ul class="header_wrapper_nav_list">
@@ -17,9 +17,7 @@
     </div>
     <div class="header_container">
       <img :src="Search" alt="search" class="header_container_search" />
-      <base-transparent-button
-        class="header_container_button"
-      ></base-transparent-button>
+      <base-transparent-button class="header_container_button"></base-transparent-button>
       <img :src="Download" alt="download" class="header_container_download" />
     </div>
   </header>
@@ -50,8 +48,16 @@ $bgc: #131313;
 
   &_wrapper {
     display: flex;
+    align-items: center;
     gap: 25px;
     position: relative;
+
+    &_logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
 
     @media (min-width: 768px) {
       gap: 40px;
@@ -62,6 +68,7 @@ $bgc: #131313;
       border: none;
       padding: 0;
       margin: 0;
+
 
       @media (min-width: 768px) {
         display: none;
@@ -79,17 +86,19 @@ $bgc: #131313;
       @media (min-width: 768px) {
         transform: none;
         position: relative
-        
       }
 
       &.open {
         transform: translate(79%, 75%);
+        background-color: #131313;
+        padding: 10px;
+        border: 0.3px solid #fff;
       }
 
       &_list {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 30px;
         list-style-type: none;
         margin-block-start: 0;
         margin-block-end: 0;
