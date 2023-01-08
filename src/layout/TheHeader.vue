@@ -53,11 +53,19 @@ $bgc: #131313;
     gap: 25px;
     position: relative;
 
+    @media (min-width: 768px) {
+      gap: 40px;
+    }
+
     &_button {
       background-color: $bgc;
       border: none;
       padding: 0;
       margin: 0;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     &_nav {
@@ -67,6 +75,12 @@ $bgc: #131313;
       position: absolute;
       transform: translate(-100%, 75%);
       transition: transform 0.2s ease-out;
+
+      @media (min-width: 768px) {
+        transform: none;
+        position: relative
+        
+      }
 
       &.open {
         transform: translate(79%, 75%);
@@ -99,6 +113,10 @@ $bgc: #131313;
     justify-content: center;
     align-items: center;
 
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+
     &_download {
       background-color: #5ba300;
       padding: 14px;
@@ -110,6 +128,10 @@ $bgc: #131313;
 
     &_button {
       display: none;
+
+      @media (min-width: 768px) {
+        display: contents;
+      }
     }
   }
 }
