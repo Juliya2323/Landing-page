@@ -1,27 +1,27 @@
 <template>
-    <button class="base_button">
-        <slot></slot>
-    </button>
+  <button class="base_button">
+    <slot></slot>
+  </button>
 </template>
 
 <style scoped>
-    .base_button {
-        background-color: #5BA300;
-        font-weight: 400;
-        font-size: 18px;
-        color: #fff;
-    }
-    
-    .base_button:hover {
-        background-color: #c1e19a;
-        border: 2px solid #fff;
-    }
+.base_button {
+  background-color: #5ba300;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
 
-    .base_button:active {
-        background-color: #639a21;
-    }
+.base_button:hover {
+  background-color: #c1e19a;
+  border: 2px solid #fff;
+}
 
-    slot {
-        padding: 0 0;
-    }
+.base_button:active {
+  background-color: #639a21;
+}
+
+slot {
+  padding: 0 0;
+}
 </style>

@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-   import TheHeader from '@/layout/TheHeader.vue';
-   import TheFooter from '@/layout/TheFooter.vue';
+import TheHeader from "@/layout/TheHeader.vue";
+import TheFooter from "@/layout/TheFooter.vue";
 </script>
-
