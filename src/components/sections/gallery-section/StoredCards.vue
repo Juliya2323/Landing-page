@@ -114,8 +114,8 @@ const editorCards = reactive([
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 43px;
-  padding-bottom: 150px;
+  gap: 25px;
+  padding-bottom: 50px;
 
   &_description {
     display: flex;
@@ -124,32 +124,40 @@ const editorCards = reactive([
 
     &_title {
       font-weight: 700;
-      font-size: 36px;
-      line-height: 54px;
+      font-size: 32px;
+      line-height: 40px;
     }
     &_subtitle {
       font-weight: 700;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 22px;
+      line-height: 30px;
       padding-right: 32px;
       position: relative;
+      white-space:nowrap;
     }
 
     &_subtitle::after {
       content: url(@/assets/icons/arrow-right.svg);
       position: absolute;
       top: 4px;
-      left: 100px;
+      left: 86px;
     }
   }
 
-  &_container_action_cards,
-  &_container_editor_cards {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  &_container {
+    overflow-x: scroll;
+
+    &_action_cards,
+    &_editor_cards {
+      display: flex;
+      gap: 25px;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
   }
+
+  
 }
 </style>

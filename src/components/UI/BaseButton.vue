@@ -8,7 +8,7 @@
 .base_button {
   background-color: #5ba300;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
 }
 

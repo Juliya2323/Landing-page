@@ -52,7 +52,12 @@ const props = defineProps({
   padding: 26px 22px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 13px;
+
+  &_img {
+    width: 260px;
+    height: auto;
+  }
 
   &_main {
     display: flex;
@@ -79,8 +84,8 @@ const props = defineProps({
 
     &_name {
       font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 17px;
+      line-height: 26px;
     }
 
     &_edition {
@@ -96,7 +101,7 @@ const props = defineProps({
     justify-content: space-between;
 
     &_button {
-      padding: 12px 44px;
+      padding: 10px 20px;
     }
 
     &_price {
@@ -118,7 +123,7 @@ const props = defineProps({
 
         &_subtitle {
           font-weight: 700;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 27px;
         }
       }

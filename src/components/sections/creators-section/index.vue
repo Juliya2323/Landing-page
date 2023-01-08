@@ -93,7 +93,7 @@ const items = reactive([
 <style scoped lang="scss">
 .creators {
   background-color: #131313;
-  padding: 10px 10% 170px;
+  padding: 10px 7% 70px;
   display: flex;
   flex-direction: column;
   gap: 52px;
@@ -103,11 +103,15 @@ const items = reactive([
 
   &_title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 32px;
+    line-height: 40px;
   }
 
-  &_board_list {
+  &_board {
+    max-height: 400px;
+    overflow-y: scroll;
+
+    &_list {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -116,9 +120,12 @@ const items = reactive([
     margin: 0;
     padding: 0;
   }
+  }
+
+  
 
   &_button {
-    margin-top: 70px;
+    margin-top: 30px;
   }
 }
 </style>

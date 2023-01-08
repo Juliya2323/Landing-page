@@ -12,10 +12,10 @@ import StoredCards from "@/components/sections/gallery-section/StoredCards.vue";
 <style scoped lang="scss">
 .gallery {
   background-color: #131313;
-  padding: 39px 10% 182px;
+  padding: 25px 7% 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 22px;
   font-family: "Arial";
   color: #ffffff;
 

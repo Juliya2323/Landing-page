@@ -28,16 +28,17 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .item {
-  padding: 22px 38px 22px 10px;
+  padding: 12px 12px;
   background-color: #1d1d1d;
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  align-items:center;
+  gap: 16px;
   border-radius: 30px;
 
   &_img {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
   }
 
   &_info {
@@ -48,13 +49,13 @@ const props = defineProps({
     &_title {
       display: flex;
       justify-content: space-between;
-      min-width: 253px;
+      width: 210px;
       align-items: center;
 
       &_name {
         font-style: normal;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 30px;
       }
 
