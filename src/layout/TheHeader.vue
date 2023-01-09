@@ -46,6 +46,15 @@ $bgc: #131313;
   align-items: center;
   padding: 50px 20px;
 
+  @media (min-width: 1024px) {
+    padding: 50px 45px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 63px 88px 106px 66px;
+  }
+  
+
   &_wrapper {
     display: flex;
     align-items: center;
@@ -139,7 +148,7 @@ $bgc: #131313;
       display: none;
 
       @media (min-width: 768px) {
-        display: contents;
+        display: block;
       }
     }
   }

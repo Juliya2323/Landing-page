@@ -68,6 +68,15 @@ const thirdLineImgs = [imgLink5, imgLink6];
   color: #ffffff;
   position: relative;
 
+  @media (min-width: 1024px) {
+    padding: 20px 10% 80px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 90px 20% 120px;
+  }
+
+
   &_sections {
     list-style: none;
     display: flex;
@@ -82,6 +91,10 @@ const thirdLineImgs = [imgLink5, imgLink6];
 
       &_img {
         display: none;
+
+        @media (min-width: 1024px) {
+        display: contents;
+      }
       }
 
       &_info {
@@ -111,6 +124,11 @@ const thirdLineImgs = [imgLink5, imgLink6];
           width: 70%;
           text-align: center;
           margin-bottom: 50px;
+
+          @media (min-width: 1440px) {
+            font-size: 22px;
+            margin-bottom: 67px;
+          }
         }
 
         &_button {

@@ -101,6 +101,16 @@ const items = reactive([
   font-family: "Arial";
   color: #ffffff;
 
+  
+
+  @media (min-width: 1024px) {
+    padding: 20px 10% 70px;
+  }
+
+  @media (min-width: 1440px) {
+        padding: 110px 10% 160px;
+  }
+
   &_title {
     font-weight: 700;
     font-size: 32px;
@@ -111,11 +121,16 @@ const items = reactive([
     max-height: 400px;
     overflow-y: scroll;
 
+    @media (min-width: 1440px) {
+      overflow-y:visible;
+      max-height: 100%;
+  }
+
     &_list {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
     gap: 28px;
     margin: 0;
     padding: 0;

@@ -36,9 +36,22 @@ const props = defineProps({
   gap: 16px;
   border-radius: 30px;
 
+  @media (min-width: 1024px) {
+    padding: 14px 36px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 22px 37px;
+  }
+
   &_img {
     width: 65px;
     height: 65px;
+
+    @media (min-width: 1440px) {
+      width: 85px;
+    height: 85px;
+  }
   }
 
   &_info {
@@ -52,11 +65,19 @@ const props = defineProps({
       width: 210px;
       align-items: center;
 
+      @media (min-width: 1440px) {
+          width: 242px;
+  }
+
       &_name {
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 30px;
+
+        @media (min-width: 1440px) {
+          font-size: 20px;
+  }
       }
 
       &_button {

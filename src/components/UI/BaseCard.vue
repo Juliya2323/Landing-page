@@ -57,6 +57,11 @@ const props = defineProps({
   &_img {
     width: 260px;
     height: auto;
+
+    @media (min-width: 1024px) {
+      width: 325px;
+      height: 332px;
+    }
   }
 
   &_main {
@@ -86,6 +91,11 @@ const props = defineProps({
       font-weight: 700;
       font-size: 17px;
       line-height: 26px;
+
+      @media (min-width: 1024px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     &_edition {
@@ -93,6 +103,11 @@ const props = defineProps({
       font-size: 13px;
       line-height: 19px;
       color: rgba(255, 255, 255, 0.6);
+
+      @media (min-width: 1024px) {
+        font-size: 13px;
+        line-height: 19px;
+      }
     }
   }
 
@@ -102,6 +117,10 @@ const props = defineProps({
 
     &_button {
       padding: 10px 20px;
+
+      @media (min-width: 1024px) {
+        padding: 12px 44px;
+      }
     }
 
     &_price {
@@ -125,6 +144,10 @@ const props = defineProps({
           font-weight: 700;
           font-size: 16px;
           line-height: 27px;
+
+          @media (min-width: 1024px) {
+            font-size: 18px;
+          }
         }
       }
     }

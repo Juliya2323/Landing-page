@@ -101,7 +101,17 @@ $grayPrint: rgba(255, 255, 255, 0.6);
   gap: 45px;
   justify-content: center;
 
-  
+  @media (min-width: 922px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 20px 10% 10%;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 10% 159px;
+  }
 
   &_info {
     display: flex;
@@ -109,24 +119,72 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     gap: 22px;
     max-width: 400px;
 
+    @media (min-width: 716px) {
+        max-width: 267px;
+      }
+
+      @media (min-width: 1440px) {
+        max-width: 383px;
+        gap: 43px;
+      }
+
+
     &_title {
       font-weight: 700;
       font-size: 42px;
       line-height: 55px;
       letter-spacing: 0.015em;
       margin: 0;
+
+      @media (min-width: 716px) {
+        font-size: 39px;
+        line-height: 48px;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 42px;
+      }
+
+      @media (min-width: 922px) {
+        font-size: 48px;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 55px;
+        line-height: 63px;
+      }
+      
     }
 
     &_subtitle {
       font-weight: 400;
       font-size: 42px;
       line-height: 49px;
+
+      @media (min-width: 768px) {
+       font-size: 40px;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 55px;
+        line-height: 63px;
+      }
     }
 
     &_description {
       font-weight: 400;
       font-size: 22px;
       line-height: 33px;
+
+      @media (min-width: 716px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 22px;
+        line-height: 33px;
+      }
     }
 
     &_gallery {
@@ -134,6 +192,12 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      
+
+      @media (min-width: 1440px) {
+        gap:13px;
+        justify-content: flex-start;
+      }
 
       &_pictures {
         display: flex;
@@ -160,6 +224,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
           font-size: 14px;
           line-height: 17px;
           color: $grayPrint;
+
+          @media (min-width: 1440px) {
+            font-size: 18px;
+            line-height: 27px;
+          }
         }
       }
     }
@@ -169,6 +238,19 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       font-weight: 700;
       font-size: 22px;
       line-height: 38%;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 124%;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 24px;
+        line-height: 36px;   
+        padding-top: 43px;
+       }
+
+
     }
 
     &_details::before {
@@ -179,14 +261,32 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       width: 63px;
       height: 2px;
       background-color: #5ba300;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 124%;
+        top: 34px;
+      }
+
+      @media (min-width: 922px) {
+        top: 39px;
+      }
+
+      @media (min-width: 1440px) {
+        top: 95px;
+      }
     }
 
     &_details::after {
       content: url(@/assets/icons/arrow-right.svg);
       display: none;
       position: absolute;
-      top: -7px;
-      right: 75px;
+
+      @media (min-width: 1440px) {
+        display: block; 
+        top: 47px;
+        left: 291px;
+       }
     }
   }
 
@@ -205,9 +305,18 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       flex-direction: column;
       gap: 14px;
 
+      @media (min-width: 1440px) {
+          padding: 31px 26px 35px;  
+        }
+
       &_img {
         width: 260px;
         height: auto;
+
+        @media (min-width: 1440px) {
+          width: 394px;
+          height: 477px;    
+        }
       }
 
       &_source {
@@ -218,6 +327,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
           font-weight: 700;
           font-size: 17px;
           line-height: 30px;
+
+          @media (min-width: 1440px) {
+            font-size: 20px;
+            line-height: 30px; 
+        }
         }
 
         &_author {
@@ -225,6 +339,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
           font-size: 16px;
           line-height: 27px;
           color: $grayPrint;
+
+          @media (min-width: 1440px) {
+            font-size: 18px;
+            line-height: 28px;   
+        }
         }
       }
 
@@ -243,6 +362,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
             font-weight: 400;
             font-size: 17px;
             line-height: 33px;
+
+            @media (min-width: 1440px) {
+            font-size: 22px;
+            line-height: 33px; 
+            }
           }
 
           &_additional {
@@ -250,6 +374,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
             font-size: 16px;
             line-height: 27px;
             color: $grayPrint;
+
+            @media (min-width: 1440px) {
+            font-size: 18px;
+            line-height: 27px; 
+        }
           }
         }
       }
@@ -265,7 +394,21 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       height: 493px;
       border: 1px solid #5ba300;
       z-index: -1;
+
+      @media (min-width: 716px) {
+        top: 14px;
+        left: 15px;
+      }
+
+      @media (min-width: 1440px) {
+          width: 448px;
+          height: 667px;  
+          top: 23px;
+          left: 25px;  
+        }
     }
+
+
   }
 
   &_statistics_list {
@@ -275,15 +418,33 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     margin: 0;
     padding: 0;
 
+    @media (min-width: 922px) {
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+  
+      @media (min-width: 1440px) {
+        gap: 36px;
+      }
+
     &_item {
       display: flex;
       flex-direction: column;
       gap: 9px;
 
+      @media (min-width: 1440px) {
+        gap: 5px;
+      }
+
       &_main_info {
         font-weight: 700;
         font-size: 30px;
         line-height: 29px;
+
+        @media (min-width: 1440px) {
+          font-size: 36px;
+          line-height: 41px; 
+        }
       }
 
       &_additional_info {
@@ -291,6 +452,11 @@ $grayPrint: rgba(255, 255, 255, 0.6);
         font-size: 17px;
         line-height: 26px;
         color: $grayPrint;
+
+        @media (min-width: 1440px) {
+          font-size: 20px;
+          line-height: 30px; 
+        }
       }
     }
   }

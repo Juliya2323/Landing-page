@@ -117,6 +117,11 @@ const editorCards = reactive([
   gap: 25px;
   padding-bottom: 50px;
 
+  @media (min-width: 1024px) {
+    padding-bottom: 96px;
+    gap: 43px;
+  }
+
   &_description {
     display: flex;
     justify-content: space-between;
@@ -126,6 +131,11 @@ const editorCards = reactive([
       font-weight: 700;
       font-size: 32px;
       line-height: 40px;
+
+      @media (min-width: 1024px) {
+        font-size: 36px;
+        line-height: 54px;
+      }
     }
     &_subtitle {
       font-weight: 700;
@@ -134,6 +144,12 @@ const editorCards = reactive([
       padding-right: 32px;
       position: relative;
       white-space:nowrap;
+
+      @media (min-width: 1024px) {
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 36px;
+      }
     }
 
     &_subtitle::after {
@@ -141,6 +157,10 @@ const editorCards = reactive([
       position: absolute;
       top: 4px;
       left: 86px;
+
+      @media (min-width: 1024px) {
+        left: 133px
+      }
     }
   }
 
