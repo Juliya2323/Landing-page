@@ -17,10 +17,6 @@
   box-shadow: 0 0 5px #7CFC00, 0 0 25px #7CFC00, 0 0 50px #7CFC00, 0 0 100px #7CFC00;
 }
 
-.base_button:active {
-  background-color: #639a21;
-}
-
 slot {
   padding: 0 0;
 }
