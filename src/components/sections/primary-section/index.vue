@@ -120,14 +120,13 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     max-width: 400px;
 
     @media (min-width: 716px) {
-        max-width: 267px;
-      }
+      max-width: 267px;
+    }
 
-      @media (min-width: 1440px) {
-        max-width: 383px;
-        gap: 43px;
-      }
-
+    @media (min-width: 1440px) {
+      max-width: 383px;
+      gap: 43px;
+    }
 
     &_title {
       font-weight: 700;
@@ -153,7 +152,6 @@ $grayPrint: rgba(255, 255, 255, 0.6);
         font-size: 55px;
         line-height: 63px;
       }
-      
     }
 
     &_subtitle {
@@ -162,7 +160,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       line-height: 49px;
 
       @media (min-width: 768px) {
-       font-size: 40px;
+        font-size: 40px;
       }
 
       @media (min-width: 1440px) {
@@ -192,10 +190,9 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      
 
       @media (min-width: 1440px) {
-        gap:13px;
+        gap: 13px;
         justify-content: flex-start;
       }
 
@@ -246,11 +243,9 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
       @media (min-width: 1440px) {
         font-size: 24px;
-        line-height: 36px;   
+        line-height: 36px;
         padding-top: 43px;
-       }
-
-
+      }
     }
 
     &_details::before {
@@ -283,10 +278,10 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       position: absolute;
 
       @media (min-width: 1440px) {
-        display: block; 
+        display: block;
         top: 47px;
         left: 291px;
-       }
+      }
     }
   }
 
@@ -306,8 +301,8 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       gap: 14px;
 
       @media (min-width: 1440px) {
-          padding: 31px 26px 35px;  
-        }
+        padding: 31px 26px 35px;
+      }
 
       &_img {
         width: 260px;
@@ -315,7 +310,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
         @media (min-width: 1440px) {
           width: 394px;
-          height: 477px;    
+          height: 477px;
         }
       }
 
@@ -330,8 +325,8 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
           @media (min-width: 1440px) {
             font-size: 20px;
-            line-height: 30px; 
-        }
+            line-height: 30px;
+          }
         }
 
         &_author {
@@ -342,8 +337,8 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
           @media (min-width: 1440px) {
             font-size: 18px;
-            line-height: 28px;   
-        }
+            line-height: 28px;
+          }
         }
       }
 
@@ -364,8 +359,8 @@ $grayPrint: rgba(255, 255, 255, 0.6);
             line-height: 33px;
 
             @media (min-width: 1440px) {
-            font-size: 22px;
-            line-height: 33px; 
+              font-size: 22px;
+              line-height: 33px;
             }
           }
 
@@ -376,9 +371,9 @@ $grayPrint: rgba(255, 255, 255, 0.6);
             color: $grayPrint;
 
             @media (min-width: 1440px) {
-            font-size: 18px;
-            line-height: 27px; 
-        }
+              font-size: 18px;
+              line-height: 27px;
+            }
           }
         }
       }
@@ -401,14 +396,12 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       }
 
       @media (min-width: 1440px) {
-          width: 448px;
-          height: 667px;  
-          top: 23px;
-          left: 25px;  
-        }
+        width: 448px;
+        height: 667px;
+        top: 23px;
+        left: 25px;
+      }
     }
-
-
   }
 
   &_statistics_list {
@@ -419,13 +412,13 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     padding: 0;
 
     @media (min-width: 922px) {
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-  
-      @media (min-width: 1440px) {
-        gap: 36px;
-      }
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 1440px) {
+      gap: 36px;
+    }
 
     &_item {
       display: flex;
@@ -443,7 +436,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
         @media (min-width: 1440px) {
           font-size: 36px;
-          line-height: 41px; 
+          line-height: 41px;
         }
       }
 
@@ -455,12 +448,10 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
         @media (min-width: 1440px) {
           font-size: 20px;
-          line-height: 30px; 
+          line-height: 30px;
         }
       }
     }
   }
 }
-
-
 </style>

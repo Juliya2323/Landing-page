@@ -32,7 +32,7 @@ const props = defineProps({
   background-color: #1d1d1d;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   gap: 16px;
   border-radius: 30px;
 
@@ -50,8 +50,8 @@ const props = defineProps({
 
     @media (min-width: 1440px) {
       width: 85px;
-    height: 85px;
-  }
+      height: 85px;
+    }
   }
 
   &_info {
@@ -66,8 +66,8 @@ const props = defineProps({
       align-items: center;
 
       @media (min-width: 1440px) {
-          width: 242px;
-  }
+        width: 242px;
+      }
 
       &_name {
         font-style: normal;
@@ -77,7 +77,7 @@ const props = defineProps({
 
         @media (min-width: 1440px) {
           font-size: 20px;
-  }
+        }
       }
 
       &_button {

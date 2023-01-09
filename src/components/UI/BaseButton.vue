@@ -13,8 +13,8 @@
 }
 
 .base_button:hover {
-  background-color: #c1e19a;
-  border: 2px solid #fff;
+  background-color: #7CFC00;
+  box-shadow: 0 0 5px #7CFC00, 0 0 25px #7CFC00, 0 0 50px #7CFC00, 0 0 100px #7CFC00;
 }
 
 .base_button:active {

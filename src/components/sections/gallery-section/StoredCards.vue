@@ -167,6 +167,10 @@ const editorCards = reactive([
   &_container {
     overflow-x: scroll;
 
+    @media (min-width: 1440px) {
+      overflow-x:visible;
+      }
+
     &_action_cards,
     &_editor_cards {
       display: flex;

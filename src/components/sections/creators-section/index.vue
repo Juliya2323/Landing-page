@@ -101,14 +101,12 @@ const items = reactive([
   font-family: "Arial";
   color: #ffffff;
 
-  
-
   @media (min-width: 1024px) {
     padding: 20px 10% 70px;
   }
 
   @media (min-width: 1440px) {
-        padding: 110px 10% 160px;
+    padding: 110px 10% 160px;
   }
 
   &_title {
@@ -122,22 +120,20 @@ const items = reactive([
     overflow-y: scroll;
 
     @media (min-width: 1440px) {
-      overflow-y:visible;
+      overflow-y: visible;
       max-height: 100%;
-  }
+    }
 
     &_list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: center;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      justify-content: center;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
   }
-  }
-
-  
 
   &_button {
     margin-top: 30px;

@@ -83,7 +83,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     color: #ffffff;
 
     @media (min-width: 716px) {
-      align-items:center;
+      align-items: center;
     }
 
     @media (min-width: 768px) {
@@ -100,7 +100,6 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       justify-content: flex-start;
       gap: 20px;
 
-
       &_logo {
         border-right: 1px solid #333333;
         padding-right: 20px;
@@ -115,7 +114,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
 
         @media (min-width: 1440px) {
           padding-left: 61px;
-          }
+        }
 
         &_title {
           font-weight: 700;
@@ -136,7 +135,6 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
           margin: 0;
           padding: 0;
 
-          
           @media (min-width: 716px) {
             flex-wrap: wrap;
             max-height: 136px;
@@ -147,7 +145,6 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
           }
 
           @media (min-width: 1440px) {
-            
             gap: 51px;
           }
 
@@ -159,13 +156,12 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
             text-decoration: none;
 
             @media (min-width: 768px) {
-            font-size: 16px;
-          }
+              font-size: 16px;
+            }
 
-          @media (min-width: 1440px) {
-            
-            font-size: 22px;
-          }
+            @media (min-width: 1440px) {
+              font-size: 22px;
+            }
           }
         }
       }
@@ -178,20 +174,19 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       align-items: center;
 
       @media (min-width: 768px) {
-            max-width: 260px;
-            gap: 14px;
-          }
+        max-width: 260px;
+        gap: 14px;
+      }
 
       @media (min-width: 970px) {
         max-width: 390px;
         align-items: flex-start;
-
       }
 
       @media (min-width: 1440px) {
-            max-width: 442px;
-            gap: 37px;
-          }
+        max-width: 442px;
+        gap: 37px;
+      }
 
       &_title {
         font-weight: 700;
@@ -200,7 +195,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
 
         @media (min-width: 1440px) {
           font-size: 32px;
-          }
+        }
       }
 
       &_description {
@@ -210,14 +205,13 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
         text-align: center;
 
         @media (min-width: 970px) {
-        text-align: left;
+          text-align: left;
+        }
 
-      }
-
-      @media (min-width: 1440px) {
+        @media (min-width: 1440px) {
           font-size: 22px;
           line-height: 29px;
-          }
+        }
       }
 
       &_input {
@@ -226,34 +220,27 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
         max-width: 100%;
         justify-content: center;
         font-size: 20px;
-line-height: 23px;
+        line-height: 23px;
 
         @media (min-width: 970px) {
-        max-width: 100%;
+          max-width: 100%;
           flex-direction: row;
-      }
-
-      
+        }
 
         &_field {
           display: block;
           padding: 18px 26px;
           background-color: #131313;
           border: none;
-          
-
-          
 
           @media (min-width: 768px) {
-          padding: 12px 17px;
+            padding: 12px 17px;
           }
 
           @media (min-width: 1440px) {
             padding: 22px 39px;
           }
         }
-
-        
 
         &_button {
           display: block;
@@ -264,13 +251,12 @@ line-height: 23px;
           line-height: 23px;
 
           @media (min-width: 768px) {
-          padding: 12px 17px;
+            padding: 12px 17px;
           }
 
           @media (min-width: 1440px) {
             padding: 22px 39px;
           }
-          
         }
       }
     }
@@ -287,7 +273,7 @@ line-height: 23px;
     @media (min-width: 716px) {
       flex-direction: row;
       justify-content: space-between;
-      align-items:center;
+      align-items: center;
       padding: 5px 5%;
     }
 

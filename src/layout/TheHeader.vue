@@ -17,7 +17,9 @@
     </div>
     <div class="header_container">
       <img :src="Search" alt="search" class="header_container_search" />
-      <base-transparent-button class="header_container_button"></base-transparent-button>
+      <base-transparent-button
+        class="header_container_button"
+      ></base-transparent-button>
       <img :src="Download" alt="download" class="header_container_download" />
     </div>
   </header>
@@ -53,7 +55,6 @@ $bgc: #131313;
   @media (min-width: 1440px) {
     padding: 63px 88px 106px 66px;
   }
-  
 
   &_wrapper {
     display: flex;
@@ -78,7 +79,6 @@ $bgc: #131313;
       padding: 0;
       margin: 0;
 
-
       @media (min-width: 768px) {
         display: none;
       }
@@ -94,7 +94,7 @@ $bgc: #131313;
 
       @media (min-width: 768px) {
         transform: none;
-        position: relative
+        position: relative;
       }
 
       &.open {

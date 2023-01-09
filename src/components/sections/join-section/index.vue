@@ -76,7 +76,6 @@ const thirdLineImgs = [imgLink5, imgLink6];
     padding: 90px 20% 120px;
   }
 
-
   &_sections {
     list-style: none;
     display: flex;
@@ -93,8 +92,8 @@ const thirdLineImgs = [imgLink5, imgLink6];
         display: none;
 
         @media (min-width: 1024px) {
-        display: contents;
-      }
+          display: contents;
+        }
       }
 
       &_info {
