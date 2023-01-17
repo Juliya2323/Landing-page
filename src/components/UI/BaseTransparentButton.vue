@@ -2,7 +2,7 @@
   <button class="transparent_button">Connect wallet</button>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .transparent_button {
   font-weight: 400;
   font-size: 19px;

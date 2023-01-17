@@ -6,7 +6,7 @@
   </h1>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header_logo_wrapper {
   display: flex;
   justify-content: center;

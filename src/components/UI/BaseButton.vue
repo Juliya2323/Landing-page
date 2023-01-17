@@ -4,7 +4,7 @@
   </button>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .base_button {
   background-color: #5ba300;
   font-weight: 400;
