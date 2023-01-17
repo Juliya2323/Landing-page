@@ -4,10 +4,10 @@
       <base-logo class="header_wrapper_logo"></base-logo>
       <nav class="header_wrapper_nav" :class="{ open: isOpen }">
         <ul class="header_wrapper_nav_list">
-          <li v-for="(link, index) in links" :key="index">
-            <a :href="`#${link}`" class="header_wrapper_nav_list_item">{{
-              link
-            }}</a>
+          <li v-for="link in links" :key="link.id">
+            <router-link to="navigateTo" class="header_wrapper_nav_list_item">
+            {{link.name}}
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -28,11 +28,15 @@ import { reactive, ref } from "vue";
 import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
-const links = reactive(["Discover", "Marketplace", "More"]);
+const links = reactive([{name: "Discover", id: "Discover"}, {name: "Marketplace", id: "Marketplace"}, {name: "More", id: "More"}]);
 const isOpen = ref(false);
 
 function switchNav() {
   isOpen.value = !isOpen.value;
+}
+
+function navigateTo() {
+  
 }
 </script>
 
