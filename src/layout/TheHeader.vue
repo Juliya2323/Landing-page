@@ -2,9 +2,6 @@
   <header class="header">
     <div class="header_wrapper">
       <base-logo class="header_wrapper_logo"></base-logo>
-      <button class="header_wrapper_button" v-on:click="switchNav">
-        <img :src="Burger" alt="burger_button" />
-      </button>
       <nav class="header_wrapper_nav" :class="{ open: isOpen }">
         <ul class="header_wrapper_nav_list">
           <li v-for="(link, index) in links" :key="index">
@@ -17,10 +14,11 @@
     </div>
     <div class="header_container">
       <img :src="Search" alt="search" class="header_container_search" />
-      <base-transparent-button
-        class="header_container_button"
-      ></base-transparent-button>
+      <base-transparent-button class="header_container_button"></base-transparent-button>
       <img :src="Download" alt="download" class="header_container_download" />
+      <button class="header_container_burger" v-on:click="switchNav">
+        <img :src="Burger" alt="burger_button" />
+      </button>
     </div>
   </header>
 </template>
@@ -73,23 +71,14 @@ $bgc: #131313;
       gap: 40px;
     }
 
-    &_button {
-      background-color: $bgc;
-      border: none;
-      padding: 0;
-      margin: 0;
-
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
+    
 
     &_nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      transform: translate(-100%, 75%);
+      transform: translate(-126%, 75%);
       transition: transform 0.2s ease-out;
 
       @media (min-width: 768px) {
@@ -98,10 +87,10 @@ $bgc: #131313;
       }
 
       &.open {
-        transform: translate(79%, 75%);
+        transform: translate(-10%, 75%);
         background-color: #131313;
         padding: 10px;
-        border: 0.3px solid #fff;
+        border: 0.3px solid transparent;
       }
 
       &_list {
@@ -142,13 +131,27 @@ $bgc: #131313;
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
 
     &_button {
       display: none;
 
-      @media (min-width: 768px) {
+      @media (min-width: 800px) {
         display: block;
+        cursor: pointer;
+      }
+    }
+
+
+    &_burger {
+      background-color: $bgc;
+      border: none;
+      padding: 0;
+      margin: 0;
+
+      @media (min-width: 768px) {
+        display: none;
       }
     }
   }

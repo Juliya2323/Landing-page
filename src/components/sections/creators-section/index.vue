@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import BaseItem from "@/components/UI/BaseItem.vue";
+import BaseItem from "@/components/ui/BaseItem.vue";
 import imgLink1 from "@/assets/images/item1.png";
 import imgLink2 from "@/assets/images/item2.png";
 import imgLink3 from "@/assets/images/item3.png";

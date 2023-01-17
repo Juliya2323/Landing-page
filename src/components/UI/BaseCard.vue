@@ -5,7 +5,7 @@
         <img :src="Icon" alt="icon" />
         <div class="gallery_card_main_info_title">{{ author }}</div>
       </div>
-      <img :src="Status" alt="status" />
+      <a class="gallery_card_main_info_status"><img :src="Status" alt="status" class="gallery_card_main_info_status_img"/></a>
     </div>
     <img :src="imgLink" alt="card_img" class="gallery_card_img" />
     <div class="gallery_card_description">
@@ -33,6 +33,8 @@
 import { defineProps } from "vue";
 import Icon from "@/assets/images/icon.png";
 import Status from "@/assets/icons/status.svg";
+
+
 
 const props = defineProps({
   id: String,
@@ -78,6 +80,17 @@ const props = defineProps({
         font-weight: 700;
         font-size: 16.6127px;
         line-height: 25px;
+      }
+
+      &_status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      &_status_img:hover {
+        fill: purple;
       }
     }
   }

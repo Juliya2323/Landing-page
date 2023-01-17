@@ -1,10 +1,10 @@
 import '@/assets/styles/index.css';
 import { createApp } from 'vue';
 import App from './App.vue';
-import BaseLogo from '@/components/UI/BaseLogo.vue';
-import BaseTransparentButton from '@/components/UI/BaseTransparentButton.vue';
-import BaseButton from '@/components/UI/BaseButton.vue'; 
-import BaseIcon from '@/components/UI/BaseIcon.vue';
+import BaseLogo from '@/components/ui/BaseLogo.vue';
+import BaseTransparentButton from '@/components/ui/BaseTransparentButton.vue';
+import BaseButton from '@/components/ui/BaseButton.vue'; 
+import BaseIcon from '@/components/ui/BaseIcon.vue';
 
 
 const app = createApp(App);

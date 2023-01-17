@@ -231,7 +231,32 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
           display: block;
           padding: 18px 26px;
           background-color: #131313;
-          border: none;
+
+          &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15px;
+            color: rgba(255, 255, 255, 0.6);
+
+            @media (min-width: 768px) {
+              font-size: 18px;
+              line-height: 20px;
+            }
+
+            @media (min-width: 1440px) {
+              font-size: 20px;
+              line-height: 23px;
+            }
+          }
+
+          &:focus {
+            border-color: transparent;
+            border-image: none;
+          }
+
+          &::placeholder:focus {
+            display: none;
+          }
 
           @media (min-width: 768px) {
             padding: 12px 17px;
@@ -296,6 +321,10 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       list-style: none;
       margin: 0;
       padding: 0;
+
+      &_item {
+        cursor: pointer;
+      }
     }
   }
 }

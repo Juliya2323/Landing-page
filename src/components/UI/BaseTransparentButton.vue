@@ -12,5 +12,11 @@
   border: 1px solid #5ba300;
   border-radius: 24px;
   padding: 27px 19px;
+  cursor: pointer;
+  transition: 0.2s color ease-out;
+}
+
+.transparent_button:hover {
+  color: white;
 }
 </style>

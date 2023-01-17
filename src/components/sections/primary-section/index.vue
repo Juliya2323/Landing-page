@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="primary_info_details">Discover latest Artworks</div>
+      <a class="primary_info_details">Discover latest Artworks</a>
     </div>
     <div class="primary_gallery">
       <div class="primary_gallery_card">
@@ -235,6 +235,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       font-weight: 700;
       font-size: 22px;
       line-height: 38%;
+      cursor: pointer;
 
       @media (min-width: 768px) {
         font-size: 20px;
