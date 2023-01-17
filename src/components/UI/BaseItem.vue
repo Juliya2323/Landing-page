@@ -83,6 +83,7 @@ const props = defineProps({
       &_button {
         padding: 9px 22px;
         border-radius: 17px;
+        cursor: pointer;
       }
     }
 

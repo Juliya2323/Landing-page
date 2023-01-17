@@ -17,7 +17,7 @@
       <base-transparent-button class="header_container_button"></base-transparent-button>
       <img :src="Download" alt="download" class="header_container_download" />
       <button class="header_container_burger" v-on:click="switchNav">
-        <img :src="Burger" alt="burger_button" />
+        <img :src="Burger" alt="burger_button" class="burger"/>
       </button>
     </div>
   </header>
@@ -49,6 +49,7 @@ $bgc: #131313;
   justify-content: space-between;
   align-items: center;
   padding: 50px 20px;
+  position: relative;
 
   @media (min-width: 1024px) {
     padding: 50px 45px;
@@ -82,8 +83,9 @@ $bgc: #131313;
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      transform: translate(-126%, 75%);
+      transform: translate(-130%, 0);
       transition: transform 0.2s ease-out;
+      cursor: pointer;
 
       @media (min-width: 768px) {
         transform: none;
@@ -91,20 +93,26 @@ $bgc: #131313;
       }
 
       &.open {
-        transform: translate(-10%, 75%);
+        transform: translate(-3%, 0);
+        flex-direction: column;
         background-color: #131313;
-        padding: 10px;
+        padding-top: 30px;
+        width: 100vw;
         border: 0.3px solid transparent;
       }
 
       &_list {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 30px;
         list-style-type: none;
         margin-block-start: 0;
         margin-block-end: 0;
         padding-inline-start: 0;
+
+        @media (min-width: 768px) {
+        flex-direction: row;
+      }
 
         &_item {
           font-family: "Arial";
@@ -113,6 +121,7 @@ $bgc: #131313;
           font-size: 22px;
           color: #ffffff;
           text-decoration: none;
+          cursor: pointer;
         }
       }
     }
@@ -128,6 +137,18 @@ $bgc: #131313;
       gap: 20px;
     }
 
+    &_burger {
+      z-index: 10;
+    }
+    
+    &_search {
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
     &_download {
       background-color: #5ba300;
       padding: 14px;
@@ -136,6 +157,16 @@ $bgc: #131313;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+
+      &:hover {
+      background-color: #5ba300;
+      box-shadow: 0 0 5px #5ba300;
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      background-color: #84c436;
+    }
     }
 
     &_button {

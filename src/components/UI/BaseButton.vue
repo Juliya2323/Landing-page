@@ -12,15 +12,18 @@
   color: #fff;
   border: transparent;
   transition: 0.2s box-shadow ease-out;
+  cursor: pointer;
+
+  
 }
 
 .base_button:hover {
-  background-color: #88e829;
-  box-shadow: 0 0 5px #88e829, 0 0 25px #88e829;
+  background-color: #5ba300;
+  box-shadow: 0 0 10px #5ba300;
 }
 
 .base_button:active {
-  font-size: 17px;
+  background-color: #84c436;
 }
 
 slot {

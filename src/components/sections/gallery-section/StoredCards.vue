@@ -2,7 +2,7 @@
   <div class="cards">
     <div class="cards_description">
       <div class="cards_description_title">Actions</div>
-      <a class="cards_description_subtitle">View all</a>
+      <button class="cards_description_subtitle">View all</button>
     </div>
     <div class="cards_container">
       <ul class="cards_container_action_cards">
@@ -23,7 +23,7 @@
   <div class="cards">
     <div class="cards_description">
       <div class="cards_description_title">Editor’s Pick</div>
-      <a class="cards_description_subtitle">View all</a>
+      <button class="cards_description_subtitle">View all</button>
     </div>
     <div class="cards_container">
       <ul class="cards_container_editor_cards">
@@ -144,6 +144,9 @@ const editorCards = reactive([
       padding-right: 32px;
       position: relative;
       white-space:nowrap;
+      background-color: transparent;
+      border: none;
+      color: white;
       cursor: pointer;
 
       @media (min-width: 1024px) {

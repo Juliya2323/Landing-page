@@ -231,6 +231,17 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
           display: block;
           padding: 18px 26px;
           background-color: #131313;
+          border: 1px solid transparent;
+          outline: none;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 15px;
+          color: rgba(255, 255, 255, 0.6);
+
+          @media (min-width: 1440px) {
+              font-size: 16px;
+              line-height: 23px;
+            }
 
           &::placeholder {
             font-weight: 400;
@@ -238,24 +249,18 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
             line-height: 15px;
             color: rgba(255, 255, 255, 0.6);
 
-            @media (min-width: 768px) {
-              font-size: 18px;
-              line-height: 20px;
-            }
-
             @media (min-width: 1440px) {
-              font-size: 20px;
+              font-size: 16px;
               line-height: 23px;
             }
           }
 
           &:focus {
-            border-color: transparent;
-            border-image: none;
+            border: 1px solid rgb(94, 101, 96);
           }
 
-          &::placeholder:focus {
-            display: none;
+          &:focus::placeholder {
+            opacity: 0;
           }
 
           @media (min-width: 768px) {

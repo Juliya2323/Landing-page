@@ -90,9 +90,13 @@ const props = defineProps({
         cursor: pointer;
 
         &:hover {
-          fill: #5ba300;
-          stroke: #5ba300;
-          stroke-opacity: 1;
+          fill: #6c9f2d;
+          stroke-opacity: 0;
+        }
+
+        &:active {
+          fill: #6c9f2d;
+          stroke-opacity: 0;
         }
       }
 

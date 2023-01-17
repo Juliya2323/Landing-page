@@ -18,5 +18,6 @@
 
 .transparent_button:hover {
   color: white;
+  transform: translateY(-5px);
 }
 </style>
