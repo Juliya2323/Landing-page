@@ -1,5 +1,6 @@
 <template>
-  <header class="header">
+  <div class="header_header">
+    <header class="header">
     <div class="header_wrapper">
       <base-logo class="header_wrapper_logo"></base-logo>
       <nav class="header_wrapper_nav" :class="{ open: isOpen }">
@@ -21,6 +22,7 @@
       </button>
     </div>
   </header>
+  </div>
 </template>
 
 <script setup>
@@ -43,6 +45,13 @@ function navigateTo() {
 <style scoped lang="scss">
 $bgc: #131313;
 
+.header_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 7;
+}
+
 .header {
   background-color: $bgc;
   display: flex;
@@ -56,7 +65,7 @@ $bgc: #131313;
   }
 
   @media (min-width: 1440px) {
-    padding: 63px 88px 106px 66px;
+    padding: 63px 88px 63px 66px;
   }
 
   &_wrapper {

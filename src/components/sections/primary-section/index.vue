@@ -92,6 +92,7 @@ const listItems = [
 $grayPrint: rgba(255, 255, 255, 0.6);
 
 .primary {
+  margin-top: 150px;
   padding: 20px 7% 10%;
   background-color: #131313;
   font-family: "Arial";
@@ -100,6 +101,10 @@ $grayPrint: rgba(255, 255, 255, 0.6);
   flex-wrap: wrap;
   gap: 45px;
   justify-content: center;
+
+  @media (min-width: 800px) {
+    margin-top: 177px;
+  }
 
   @media (min-width: 922px) {
     justify-content: space-between;
@@ -111,6 +116,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
   @media (min-width: 1440px) {
     padding: 0 10% 159px;
+    margin-top: 204px;
   }
 
   &_info {
