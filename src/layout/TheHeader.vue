@@ -6,7 +6,7 @@
       <nav class="header_wrapper_nav" :class="{ open: isOpen }">
         <ul class="header_wrapper_nav_list">
           <li v-for="link in links" :key="link.id">
-            <router-link to="navigateTo" class="header_wrapper_nav_list_item">
+            <router-link  :to="link.id" class="header_wrapper_nav_list_item"> 
             {{link.name}}
             </router-link>
           </li>
@@ -14,7 +14,8 @@
       </nav>
     </div>
     <div class="header_container">
-      <img :src="Search" alt="search" class="header_container_search" />
+      <input type="text" class="header_search_input" placeholder="Let's start" :class="{ search: searchIsOpen }">
+      <img :src="Search" alt="search" class="header_container_search" v-on:click="switchSearch"/>
       <base-transparent-button class="header_container_button"></base-transparent-button>
       <img :src="Download" alt="download" class="header_container_download" />
       <button class="header_container_burger" v-on:click="switchNav">
@@ -30,16 +31,19 @@ import { reactive, ref } from "vue";
 import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
-const links = reactive([{name: "Discover", id: "Discover"}, {name: "Marketplace", id: "Marketplace"}, {name: "More", id: "More"}]);
+const links = reactive([{name: "Discover", id: "/primary"}, {name: "Marketplace", id: "/gallery"}, {name: "More", id: "/creators"}]);
 const isOpen = ref(false);
+const searchIsOpen = ref(false);
 
 function switchNav() {
   isOpen.value = !isOpen.value;
 }
 
-function navigateTo() {
-  
+function switchSearch() {
+  searchIsOpen.value = !searchIsOpen.value;
 }
+
+
 </script>
 
 <style scoped lang="scss">
@@ -149,13 +153,44 @@ $bgc: #131313;
     &_burger {
       z-index: 10;
     }
+
+    .header_search_input {
+      border: 1px solid rgb(62, 69, 60);
+      border-radius: 24px;
+      background-color: transparent;
+      padding: 12px 13px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 15px;
+      color: rgba(255, 255, 255, 0.6);
+      display: none;
+
+      .search {
+        display: block;
+      }
+
+      &:focus {
+        border: 1px solid #5ba300;
+      }
+
+      &:focus::placeholder {
+        opacity: 0;
+      }
+
+
+    }
     
     &_search {
       cursor: pointer;
+      display: none;
 
       &:hover {
         transform: translateY(-5px);
       }
+
+      @media (min-width: 1200px) {
+      display: block;
+    }
     }
 
     &_download {

@@ -1,5 +1,5 @@
 <template>
-  <HeroPage></HeroPage>
+  <HeroPage> </HeroPage>
 </template>
 
 
