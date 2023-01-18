@@ -1,28 +1,40 @@
 <template>
-  <div class="header_header">
+  <div class="header_container">
     <header class="header">
-    <div class="header_wrapper">
-      <base-logo class="header_wrapper_logo"></base-logo>
-      <nav class="header_wrapper_nav" :class="{ open: isOpen }">
-        <ul class="header_wrapper_nav_list">
-          <li v-for="link in links" :key="link.id">
-            <router-link  :to="link.id" class="header_wrapper_nav_list_item"> 
-            {{link.name}}
-            </router-link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header_container">
-      <input type="text" class="header_search_input" placeholder="Let's start" :class="{ search: searchIsOpen }">
-      <img :src="Search" alt="search" class="header_container_search" v-on:click="switchSearch"/>
-      <base-transparent-button class="header_container_button"></base-transparent-button>
-      <img :src="Download" alt="download" class="header_container_download" />
-      <button class="header_container_burger" v-on:click="switchNav">
-        <img :src="Burger" alt="burger_button" class="burger"/>
-      </button>
-    </div>
-  </header>
+      <div class="header_main">
+        <base-logo class="header_logo"></base-logo>
+        <nav class="header_nav" :class="{ open: isOpen }">
+          <ul class="header_nav_list">
+            <li v-for="link in links" :key="link.id">
+              <router-link :to="link.id" class="header_nav_list_item">
+                {{ link.name }}
+              </router-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header_additional">
+        <input
+          type="text"
+          class="header_input"
+          placeholder="Let's start"
+          :class="{ search: searchIsOpen }"
+        />
+        <img
+          :src="Search"
+          alt="search"
+          class="header_search"
+          v-on:click="switchSearch"
+        />
+        <base-transparent-button
+          class="header_button"
+        ></base-transparent-button>
+        <img :src="Download" alt="download" class="header_download" />
+        <button class="header_burger" v-on:click="switchNav">
+          <img :src="Burger" alt="burger_button" class="header_burger_img" />
+        </button>
+      </div>
+    </header>
   </div>
 </template>
 
@@ -31,7 +43,11 @@ import { reactive, ref } from "vue";
 import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
-const links = reactive([{name: "Discover", id: "/primary"}, {name: "Marketplace", id: "/gallery"}, {name: "More", id: "/creators"}]);
+const links = reactive([
+  { name: "Discover", id: "/primary" },
+  { name: "Marketplace", id: "/gallery" },
+  { name: "More", id: "/creators" },
+]);
 const isOpen = ref(false);
 const searchIsOpen = ref(false);
 
@@ -42,14 +58,12 @@ function switchNav() {
 function switchSearch() {
   searchIsOpen.value = !searchIsOpen.value;
 }
-
-
 </script>
 
 <style scoped lang="scss">
 $bgc: #131313;
 
-.header_header {
+.header_container {
   position: fixed;
   top: 0;
   width: 100%;
@@ -72,75 +86,14 @@ $bgc: #131313;
     padding: 63px 88px 63px 66px;
   }
 
-  &_wrapper {
+  &_main {
     display: flex;
     align-items: center;
     gap: 25px;
     position: relative;
-
-    &_logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
-
-    @media (min-width: 768px) {
-      gap: 40px;
-    }
-
-    
-
-    &_nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      transform: translate(-130%, 0);
-      transition: transform 0.2s ease-out;
-      cursor: pointer;
-
-      @media (min-width: 768px) {
-        transform: none;
-        position: relative;
-      }
-
-      &.open {
-        transform: translate(-3%, 0);
-        flex-direction: column;
-        background-color: #131313;
-        padding-top: 30px;
-        width: 100vw;
-        border: 0.3px solid transparent;
-      }
-
-      &_list {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        list-style-type: none;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 0;
-
-        @media (min-width: 768px) {
-        flex-direction: row;
-      }
-
-        &_item {
-          font-family: "Arial";
-          font-weight: 400;
-          line-height: 25px;
-          font-size: 22px;
-          color: #ffffff;
-          text-decoration: none;
-          cursor: pointer;
-        }
-      }
-    }
   }
 
-  &_container {
+  &_additional {
     display: flex;
     gap: 28px;
     justify-content: center;
@@ -149,60 +102,117 @@ $bgc: #131313;
     @media (min-width: 768px) {
       gap: 20px;
     }
+  }
 
-    &_burger {
-      z-index: 10;
+  &_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    gap: 40px;
+  }
+
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transform: translate(-130%, 0);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      transform: none;
+      position: relative;
     }
 
-    .header_search_input {
-      border: 1px solid rgb(62, 69, 60);
-      border-radius: 24px;
-      background-color: transparent;
-      padding: 12px 13px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 15px;
-      color: rgba(255, 255, 255, 0.6);
-      display: none;
-
-      .search {
-        display: block;
-      }
-
-      &:focus {
-        border: 1px solid #5ba300;
-      }
-
-      &:focus::placeholder {
-        opacity: 0;
-      }
-
-
+    &.open {
+      transform: translate(-3%, 0);
+      flex-direction: column;
+      background-color: #131313;
+      padding-top: 30px;
+      width: 100vw;
+      border: 0.3px solid transparent;
     }
-    
-    &_search {
-      cursor: pointer;
-      display: none;
 
-      &:hover {
-        transform: translateY(-5px);
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
       }
 
-      @media (min-width: 1200px) {
+      &_item {
+        font-family: "Arial";
+        font-weight: 400;
+        line-height: 25px;
+        font-size: 22px;
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .header_burger {
+    z-index: 10;
+  }
+
+  .header_input {
+    border: 1px solid rgb(62, 69, 60);
+    border-radius: 24px;
+    background-color: transparent;
+    padding: 12px 13px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    display: none;
+
+    .search {
       display: block;
     }
+
+    &:focus {
+      border: 1px solid #5ba300;
     }
 
-    &_download {
-      background-color: #5ba300;
-      padding: 14px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
 
-      &:hover {
+  &_search {
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &_download {
+    background-color: #5ba300;
+    padding: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
       background-color: #5ba300;
       box-shadow: 0 0 5px #5ba300;
       transform: translateY(-5px);
@@ -211,27 +221,25 @@ $bgc: #131313;
     &:active {
       background-color: #84c436;
     }
-    }
+  }
 
-    &_button {
+  &_button {
+    display: none;
+
+    @media (min-width: 800px) {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  &_burger {
+    background-color: $bgc;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: 768px) {
       display: none;
-
-      @media (min-width: 800px) {
-        display: block;
-        cursor: pointer;
-      }
-    }
-
-
-    &_burger {
-      background-color: $bgc;
-      border: none;
-      padding: 0;
-      margin: 0;
-
-      @media (min-width: 768px) {
-        display: none;
-      }
     }
   }
 }
