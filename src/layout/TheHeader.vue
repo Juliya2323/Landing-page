@@ -14,12 +14,13 @@
         </nav>
       </div>
       <div class="header_additional">
-        <input
+        <transition>
+          <input v-if="searchIsVisible"
           type="text"
           class="header_input"
           placeholder="Let's start"
-          :class="{ search: searchIsOpen }"
         />
+        </transition>
         <img
           :src="Search"
           alt="search"
@@ -49,14 +50,14 @@ const links = reactive([
   { name: "More", id: "/creators" },
 ]);
 const isOpen = ref(false);
-const searchIsOpen = ref(false);
+const searchIsVisible = ref(false);
 
 function switchNav() {
   isOpen.value = !isOpen.value;
 }
 
 function switchSearch() {
-  searchIsOpen.value = !searchIsOpen.value;
+  searchIsVisible.value = !searchIsVisible.value;
 }
 </script>
 
@@ -175,11 +176,6 @@ $bgc: #131313;
     font-size: 14px;
     line-height: 15px;
     color: rgba(255, 255, 255, 0.6);
-    display: none;
-
-    .search {
-      display: block;
-    }
 
     &:focus {
       border: 1px solid #5ba300;
@@ -188,6 +184,34 @@ $bgc: #131313;
     &:focus::placeholder {
       opacity: 0;
     }
+  }
+
+  .v-enter-from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .v-enter-active {
+    transition: all 0.4s ease-out;
+  }
+
+  .v-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .v-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .v-leave-active {
+    transition: all 0.4s ease-out;
+  }
+
+  .v-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
   }
 
   &_search {
@@ -242,5 +266,6 @@ $bgc: #131313;
       display: none;
     }
   }
+
 }
 </style>
