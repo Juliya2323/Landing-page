@@ -1,10 +1,11 @@
 <template>
-  <HeroPage> </HeroPage>
+  <router-view to="#"></router-view>
+  <!-- <HeroPage> </HeroPage> -->
 </template>
 
 
 <script setup>
-import HeroPage from "@/pages/hero-page/index.vue";
+//import HeroPage from "@/pages/hero-page/index.vue";
 </script>
 
 

@@ -2,13 +2,13 @@
   <li class="item">
     <img :src="imgLink" alt="img" class="item_img" />
     <div class="item_info">
-      <div class="item_info_title">
-        <div class="item_info_title_name">{{ name }}</div>
-        <base-button class="item_info_title_button">+ Follow</base-button>
+      <div class="item_title">
+        <div class="item_name">{{ name }}</div>
+        <base-button class="item_button">+ Follow</base-button>
       </div>
-      <div class="item_info_wallet">
-        <img :src="walletIcon" alt="png" class="item_info_wallet_icon" />
-        <div class="item_info_wallet_summ">{{ wallet }}</div>
+      <div class="item_wallet">
+        <img :src="walletIcon" alt="png" class="wallet_icon" />
+        <div class="wallet_summ">{{ wallet }}</div>
       </div>
     </div>
   </li>
@@ -58,47 +58,47 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     gap: 14px;
+  }
 
-    &_title {
-      display: flex;
-      justify-content: space-between;
-      width: 210px;
-      align-items: center;
+  &_title {
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+    align-items: center;
 
-      @media (min-width: 1440px) {
-        width: 242px;
-      }
-
-      &_name {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 30px;
-
-        @media (min-width: 1440px) {
-          font-size: 20px;
-        }
-      }
-
-      &_button {
-        padding: 9px 22px;
-        border-radius: 17px;
-        cursor: pointer;
-      }
+    @media (min-width: 1440px) {
+      width: 242px;
     }
+  }
 
-    &_wallet {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 11px;
+  &_name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
 
-      &_summ {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: #5ba300;
-      }
+    @media (min-width: 1440px) {
+      font-size: 20px;
+    }
+  }
+
+  &_button {
+    padding: 9px 22px;
+    border-radius: 17px;
+    cursor: pointer;
+  }
+
+  &_wallet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 11px;
+
+    .wallet_summ {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #5ba300;
     }
   }
 }

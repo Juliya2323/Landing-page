@@ -13,7 +13,7 @@
   border-radius: 24px;
   padding: 27px 19px;
   cursor: pointer;
-  transition: 0.2s color ease-out;
+  transition: 0.2s all ease-out;
 }
 
 .transparent_button:hover {

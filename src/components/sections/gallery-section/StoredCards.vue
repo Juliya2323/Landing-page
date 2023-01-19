@@ -1,11 +1,11 @@
 <template>
   <div class="cards">
     <div class="cards_description">
-      <div class="cards_description_title">Actions</div>
-      <button class="cards_description_subtitle">View all</button>
+      <div class="cards_title">Actions</div>
+      <button class="cards_subtitle">View all</button>
     </div>
     <div class="cards_container">
-      <ul class="cards_container_action_cards">
+      <ul class="cards_container_action-cards">
         <base-card
           v-for="actionCard in actionCards"
           :key="actionCard.id"
@@ -22,11 +22,11 @@
   </div>
   <div class="cards">
     <div class="cards_description">
-      <div class="cards_description_title">Editor’s Pick</div>
-      <button class="cards_description_subtitle">View all</button>
+      <div class="cards_title">Editor’s Pick</div>
+      <button class="cards_subtitle">View all</button>
     </div>
     <div class="cards_container">
-      <ul class="cards_container_editor_cards">
+      <ul class="cards_container_editor-cards">
         <base-card
           v-for="editorCard in editorCards"
           :key="editorCard.id"
@@ -127,7 +127,9 @@ const editorCards = reactive([
     justify-content: space-between;
     align-items: center;
 
-    &_title {
+  }
+
+  &_title {
       font-weight: 700;
       font-size: 32px;
       line-height: 40px;
@@ -149,6 +151,10 @@ const editorCards = reactive([
       color: white;
       cursor: pointer;
 
+      &:hover {
+        text-decoration-line: underline;
+      }
+
       @media (min-width: 1024px) {
         font-size: 24px;
         line-height: 36px;
@@ -166,7 +172,6 @@ const editorCards = reactive([
         left: 133px
       }
     }
-  }
 
   &_container {
     overflow-x: scroll;
@@ -175,8 +180,8 @@ const editorCards = reactive([
       overflow-x:visible;
       }
 
-    &_action_cards,
-    &_editor_cards {
+    &_action-cards,
+    &_editor-cards {
       display: flex;
       gap: 25px;
       justify-content: space-between;

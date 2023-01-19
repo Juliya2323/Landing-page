@@ -45,9 +45,9 @@ import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
 const links = reactive([
-  { name: "Discover", id: "/primary" },
-  { name: "Marketplace", id: "/gallery" },
-  { name: "More", id: "/creators" },
+  { name: "Discover", id: "#primary" },
+  { name: "Marketplace", id: "#gallery" },
+  { name: "More", id: "#creators" },
 ]);
 const isOpen = ref(false);
 const searchIsVisible = ref(false);

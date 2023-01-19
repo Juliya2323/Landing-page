@@ -11,7 +11,7 @@
   font-size: 16px;
   color: #fff;
   border: transparent;
-  transition: 0.2s box-shadow ease-out;
+  transition: 0.2s all ease-out;
   cursor: pointer;
 
   

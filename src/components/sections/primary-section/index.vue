@@ -1,49 +1,39 @@
 <template>
   <section class="primary">
     <div class="primary_info">
-      <h2 class="primary_info_title">
-        <span class="primary_info_subtitle">Discover</span> Rare Collection of
-        Digital Art <span class="primary_info_subtitle">and</span> NFT
+      <h2 class="primary_title">
+        <span class="primary_subtitle">Discover</span> Rare Collection of
+        Digital Art <span class="primary_subtitle">and</span> NFT
       </h2>
-      <div class="primary_info_description">
+      <div class="primary_description">
         Digital marketplace for crypto assets and non fungible tokens (NFT)
       </div>
-      <div class="primary_info_gallery">
-        <ul class="primary_info_gallery_pictures">
+      <div class="primary_icons">
+        <ul class="primary_icons_list">
           <li v-for="img in imgs" :key="img"><img :src="img" alt="img" /></li>
         </ul>
-        <div class="primary_info_gallery_description">
-          <div class="primary_info_gallery_description_number">100+</div>
-          <div class="primary_info_gallery_description_text">
-            The best designers
-          </div>
+        <div class="primary_icons_description">
+          <div class="description_number">100+</div>
+          <div class="description_text">The best designers</div>
         </div>
       </div>
-      <a class="primary_info_details">Discover latest Artworks</a>
+      <a class="primary_details">Discover latest Artworks</a>
     </div>
     <div class="primary_gallery">
-      <div class="primary_gallery_card">
-        <div class="primary_gallery_card_source">
-          <div class="primary_gallery_card_source_collection">
-            Troy Ape collection
-          </div>
-          <div class="primary_gallery_card_source_author">@tonyti</div>
+      <div class="primary_card">
+        <div class="primary_card_source">
+          <div class="source_collection">Troy Ape collection</div>
+          <div class="source_author">@tonyti</div>
         </div>
-        <img :src="monkeyImg" alt="card" class="primary_gallery_card_img" />
-        <div class="primary_gallery_card_info">
-          <div class="primary_gallery_card_info_time">
-            <div class="primary_gallery_card_info_time_main">
-              23h : 41m : 11s
-            </div>
-            <div class="primary_gallery_card_info_time_additional">
-              Remaining time
-            </div>
+        <img :src="monkeyImg" alt="card" class="primary_card_img" />
+        <div class="primary_card_info">
+          <div class="info_time">
+            <div class="time_main">23h : 41m : 11s</div>
+            <div class="time_additional">Remaining time</div>
           </div>
-          <div class="primary_gallery_card_info_cost">
-            <div class="primary_gallery_card_info_cost_main">23.09 ETH</div>
-            <div class="primary_gallery_card_info_cost_additional">
-              Highest bid
-            </div>
+          <div class="info_cost">
+            <div class="cost_main">23.09 ETH</div>
+            <div class="cost_additional">Highest bid</div>
           </div>
         </div>
       </div>
@@ -54,10 +44,10 @@
         v-for="listItem in listItems"
         :key="listItem"
       >
-        <div class="primary_statistics_list_item_main_info">
+        <div class="statistics_main_info">
           {{ listItem.main }}
         </div>
-        <div class="primary_statistics_list_item_additional_info">
+        <div class="statistics_additional_info">
           {{ listItem.additional }}
         </div>
       </li>
@@ -133,162 +123,162 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       max-width: 383px;
       gap: 43px;
     }
+  }
 
-    &_title {
-      font-weight: 700;
-      font-size: 42px;
-      line-height: 55px;
-      letter-spacing: 0.015em;
-      margin: 0;
+  &_title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 55px;
+    letter-spacing: 0.015em;
+    margin: 0;
 
-      @media (min-width: 716px) {
-        font-size: 39px;
-        line-height: 48px;
-      }
-
-      @media (min-width: 768px) {
-        font-size: 42px;
-      }
-
-      @media (min-width: 922px) {
-        font-size: 48px;
-      }
-
-      @media (min-width: 1440px) {
-        font-size: 55px;
-        line-height: 63px;
-      }
+    @media (min-width: 716px) {
+      font-size: 39px;
+      line-height: 48px;
     }
 
-    &_subtitle {
-      font-weight: 400;
+    @media (min-width: 768px) {
       font-size: 42px;
-      line-height: 49px;
+    }
 
-      @media (min-width: 768px) {
-        font-size: 40px;
-      }
+    @media (min-width: 922px) {
+      font-size: 48px;
+    }
 
-      @media (min-width: 1440px) {
-        font-size: 55px;
-        line-height: 63px;
-      }
+    @media (min-width: 1440px) {
+      font-size: 55px;
+      line-height: 63px;
+    }
+  }
+
+  &_subtitle {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 49px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 55px;
+      line-height: 63px;
+    }
+  }
+
+  &_description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+
+    @media (min-width: 716px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+
+  &_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 1440px) {
+      gap: 13px;
+      justify-content: flex-start;
+    }
+
+    &_list {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
     }
 
     &_description {
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-      @media (min-width: 716px) {
-        font-size: 20px;
-        line-height: 26px;
-      }
-
-      @media (min-width: 1440px) {
+      .description_number {
+        font-weight: 700;
         font-size: 22px;
         line-height: 33px;
       }
-    }
 
-    &_gallery {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      .description_text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $grayPrint;
 
-      @media (min-width: 1440px) {
-        gap: 13px;
-        justify-content: flex-start;
-      }
-
-      &_pictures {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 0;
-      }
-
-      &_description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        &_number {
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 33px;
-        }
-
-        &_text {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 17px;
-          color: $grayPrint;
-
-          @media (min-width: 1440px) {
-            font-size: 18px;
-            line-height: 27px;
-          }
+        @media (min-width: 1440px) {
+          font-size: 18px;
+          line-height: 27px;
         }
       }
     }
+  }
 
-    &_details {
-      position: relative;
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 38%;
-      cursor: pointer;
+  &_details {
+    position: relative;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 38%;
+    cursor: pointer;
 
-      @media (min-width: 768px) {
-        font-size: 20px;
-        line-height: 124%;
-      }
-
-      @media (min-width: 1440px) {
-        font-size: 24px;
-        line-height: 36px;
-        padding-top: 43px;
-      }
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 124%;
     }
 
-    &_details::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 28px;
-      width: 63px;
-      height: 2px;
-      background-color: #5ba300;
+    @media (min-width: 1440px) {
+      font-size: 24px;
+      line-height: 36px;
+      padding-top: 43px;
+    }
+  }
 
-      @media (min-width: 768px) {
-        font-size: 20px;
-        line-height: 124%;
-        top: 34px;
-      }
+  &_details::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    width: 63px;
+    height: 2px;
+    background-color: #5ba300;
 
-      @media (min-width: 922px) {
-        top: 39px;
-      }
-
-      @media (min-width: 1440px) {
-        top: 95px;
-      }
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 124%;
+      top: 34px;
     }
 
-    &_details::after {
-      content: url(@/assets/icons/arrow-right.svg);
-      display: none;
-      position: absolute;
+    @media (min-width: 922px) {
+      top: 39px;
+    }
 
-      @media (min-width: 1440px) {
-        display: block;
-        top: 47px;
-        left: 291px;
-      }
+    @media (min-width: 1440px) {
+      top: 95px;
+    }
+  }
+
+  &_details::after {
+    content: url(@/assets/icons/arrow-right.svg);
+    display: none;
+    position: absolute;
+
+    @media (min-width: 1440px) {
+      display: block;
+      top: 47px;
+      left: 291px;
     }
   }
 
@@ -298,45 +288,83 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     align-items: center;
     position: relative;
     z-index: 2;
+  }
 
-    &_card {
-      background-color: #131313;
-      border: 1px solid #5ba300;
-      padding: 27px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+  &_card {
+    background-color: #131313;
+    border: 1px solid #5ba300;
+    padding: 27px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @media (min-width: 1440px) {
+      padding: 31px 26px 35px;
+    }
+
+    &_img {
+      width: 260px;
+      height: auto;
 
       @media (min-width: 1440px) {
-        padding: 31px 26px 35px;
+        width: 394px;
+        height: 477px;
       }
+    }
 
-      &_img {
-        width: 260px;
-        height: auto;
+    &_source {
+      display: flex;
+      justify-content: space-between;
+
+      .source_collection {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 30px;
 
         @media (min-width: 1440px) {
-          width: 394px;
-          height: 477px;
+          font-size: 20px;
+          line-height: 30px;
         }
       }
 
-      &_source {
-        display: flex;
-        justify-content: space-between;
+      .source_author {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: $grayPrint;
 
-        &_collection {
-          font-weight: 700;
+        @media (min-width: 1440px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    &_info {
+      display: flex;
+      justify-content: space-between;
+
+      .info_time,
+      .info_cost {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4px;
+
+        .time_main,
+        .cost_main {
+          font-weight: 400;
           font-size: 17px;
-          line-height: 30px;
+          line-height: 33px;
 
           @media (min-width: 1440px) {
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 22px;
+            line-height: 33px;
           }
         }
 
-        &_author {
+        .time_additional,
+        .cost_additional {
           font-weight: 400;
           font-size: 16px;
           line-height: 27px;
@@ -344,70 +372,34 @@ $grayPrint: rgba(255, 255, 255, 0.6);
 
           @media (min-width: 1440px) {
             font-size: 18px;
-            line-height: 28px;
-          }
-        }
-      }
-
-      &_info {
-        display: flex;
-        justify-content: space-between;
-
-        &_time,
-        &_cost {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 4px;
-
-          &_main {
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 33px;
-
-            @media (min-width: 1440px) {
-              font-size: 22px;
-              line-height: 33px;
-            }
-          }
-
-          &_additional {
-            font-weight: 400;
-            font-size: 16px;
             line-height: 27px;
-            color: $grayPrint;
-
-            @media (min-width: 1440px) {
-              font-size: 18px;
-              line-height: 27px;
-            }
           }
         }
       }
     }
+  }
 
-    &_card::after {
-      content: "";
-      display: inline-block;
-      top: 13px;
-      left: 10px;
-      position: absolute;
-      width: 298px;
-      height: 493px;
-      border: 1px solid #5ba300;
-      z-index: -1;
+  &_card::after {
+    content: "";
+    display: inline-block;
+    top: 13px;
+    left: 10px;
+    position: absolute;
+    width: 298px;
+    height: 493px;
+    border: 1px solid #5ba300;
+    z-index: -1;
 
-      @media (min-width: 716px) {
-        top: 14px;
-        left: 15px;
-      }
+    @media (min-width: 716px) {
+      top: 14px;
+      left: 15px;
+    }
 
-      @media (min-width: 1440px) {
-        width: 448px;
-        height: 667px;
-        top: 23px;
-        left: 25px;
-      }
+    @media (min-width: 1440px) {
+      width: 448px;
+      height: 667px;
+      top: 23px;
+      left: 25px;
     }
   }
 
@@ -436,7 +428,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
         gap: 5px;
       }
 
-      &_main_info {
+      .statistics_main_info {
         font-weight: 700;
         font-size: 30px;
         line-height: 29px;
@@ -447,7 +439,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
         }
       }
 
-      &_additional_info {
+      .statistics_additional_info {
         font-weight: 700;
         font-size: 17px;
         line-height: 26px;
