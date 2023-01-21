@@ -169,7 +169,9 @@ const editorCards = reactive([
       top: 4px;
       left: 86px;
 
-      
+      &:hover {
+        content: url(@/assets/icons/arrow-righ-green.svg);
+      }
 
       @media (min-width: 1024px) {
         left: 133px

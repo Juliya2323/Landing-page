@@ -11,7 +11,7 @@
               :key="index"
               class="footer_list_item"
             >
-              <a class="footer_text" :href="`#${navItem}`">{{
+              <a class="footer_text green" :href="`#${navItem}`">{{
                 navItem
               }}</a>
             </li>
@@ -155,7 +155,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       color: #ffffff;
       text-decoration: none;
 
-      &:hover {
+      &.green:hover {
         color: #5ba300;
       }
 
@@ -331,6 +331,10 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
 
     &_item {
       cursor: pointer;
+
+      &:hover {
+        fill: #5ba300;
+      }
     }
   }
 }
