@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <div class="footer_main">
-      <nav class="footer_nav">
+      <nav class="footer_container">
         <base-logo class="footer_logo"></base-logo>
-        <div class="footer_content">
+        <div class="footer_nav">
           <div class="footer_title">NFT Marketplace</div>
           <ul class="footer_list">
             <li
@@ -11,7 +11,7 @@
               :key="index"
               class="footer_list_item"
             >
-              <a class="footer_list_item_link" :href="`#${navItem}`">{{
+              <a class="footer_text" :href="`#${navItem}`">{{
                 navItem
               }}</a>
             </li>
@@ -19,8 +19,8 @@
         </div>
       </nav>
       <div class="footer_subscription">
-        <div class="footer_subscription_title">Join Newsletter</div>
-        <div class="footer_subscription_description">
+        <div class="footer_title">Join Newsletter</div>
+        <div class="footer_text">
           Subscribe to our newsletter to get the latest news and updates
         </div>
         <div class="footer_input">
@@ -37,7 +37,7 @@
       <div class="footer_info">Copyright @ 2022. All rights reserved</div>
       <ul class="footer_additional_list">
         <li v-for="listItem in listItems" class="footer_additional_list_item">
-          <img :src="listItem" alt="svg" />
+          <img :src="listItem" alt="svg" class="footer_additional_list_item_img"/>
         </li>
       </ul>
     </div>
@@ -90,7 +90,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     }
   }
 
-  &_nav {
+  &_container {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
@@ -102,7 +102,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     margin: 0;
   }
 
-  &_content {
+  &_nav {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -145,12 +145,19 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       gap: 51px;
     }
 
-    &_item_link {
+    
+  }
+
+  &_text {
       font-weight: 400;
       font-size: 18px;
       line-height: 25px;
       color: #ffffff;
       text-decoration: none;
+
+      &:hover {
+        color: #5ba300;
+      }
 
       @media (min-width: 768px) {
         font-size: 16px;
@@ -160,7 +167,6 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
         font-size: 22px;
       }
     }
-  }
 
   &_subscription {
     display: flex;

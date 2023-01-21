@@ -150,9 +150,10 @@ const editorCards = reactive([
       border: none;
       color: white;
       cursor: pointer;
+      transition: all 0.2s ease-out;
 
       &:hover {
-        text-decoration-line: underline;
+        color: #5ba300;
       }
 
       @media (min-width: 1024px) {
@@ -167,6 +168,8 @@ const editorCards = reactive([
       position: absolute;
       top: 4px;
       left: 86px;
+
+      
 
       @media (min-width: 1024px) {
         left: 133px

@@ -105,6 +105,8 @@ const thirdLineImgs = [imgLink5, imgLink6];
 
   &_img {
     display: none;
+    user-select: none;
+    pointer-events: none;
 
     @media (min-width: 1024px) {
       display: contents;

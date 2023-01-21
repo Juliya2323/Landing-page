@@ -1,32 +1,45 @@
 <template>
-  <li class="gallery_card">
-    <div class="gallery_card_main">
-      <div class="gallery_card_main_info">
+  <li class="card">
+    <div class="card_main">
+      <div class="card_info">
         <img :src="Icon" alt="icon" />
-        <div class="gallery_card_main_info_title">{{ author }}</div>
+        <div class="card_title">{{ author }}</div>
       </div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="gallery_card_main_info_status">
-        <path d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="card_status"
+      >
+        <path
+          class="card_status_img"
+          d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z"
+          stroke="white"
+          stroke-opacity="0.5"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </div>
-    <img :src="imgLink" alt="card_img" class="gallery_card_img" />
-    <div class="gallery_card_description">
-      <div class="gallery_card_description_name">{{ name }}</div>
-      <div class="gallery_card_description_edition">{{ edition }}</div>
+    <img :src="imgLink" alt="card_img" class="card_img" />
+    <div class="card_description">
+      <div class="description_name">{{ name }}</div>
+      <div class="description_edition">{{ edition }}</div>
     </div>
-    <div class="gallery_card_purchase">
-      <div class="gallery_card_purchase_price">
+    <div class="card_purchase">
+      <div class="card_price">
         <base-icon></base-icon>
-        <div class="gallery_card_purchase_price_info">
-          <div class="gallery_card_purchase_price_info_title">price</div>
-          <div class="gallery_card_purchase_price_info_subtitle">
+        <div class="price_info">
+          <div class="info_title">price</div>
+          <div class="info_subtitle">
             {{ price }}
           </div>
         </div>
       </div>
-      <base-button class="gallery_card_purchase_button"
-        >Place a bid</base-button
-      >
+      <base-button class="card_button">Place a bid</base-button>
     </div>
   </li>
 </template>
@@ -34,8 +47,6 @@
 <script setup>
 import { defineProps } from "vue";
 import Icon from "@/assets/images/icon.png";
-
-
 
 const props = defineProps({
   id: String,
@@ -48,7 +59,7 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-.gallery_card {
+.card {
   max-width: 370px;
   max-height: 588px;
   background-color: #1d1d1d;
@@ -71,36 +82,36 @@ const props = defineProps({
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
 
-    &_info {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+  &_info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
-      &_title {
-        font-weight: 700;
-        font-size: 16.6127px;
-        line-height: 25px;
-      }
+  &_title {
+    font-weight: 700;
+    font-size: 16.6127px;
+    line-height: 25px;
+  }
 
-      &_status {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+  &_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
-        &:hover {
-          fill: #6c9f2d;
-          stroke-opacity: 0;
-        }
+    &:hover,
+    &_img:hover {
+      fill: #6c9f2d;
+      stroke: #6c9f2d;
+    }
 
-        &:active {
-          fill: #6c9f2d;
-          stroke-opacity: 0;
-        }
-      }
-
-      
+    &:active,
+    &_img:active {
+      fill: #6c9f2d;
+      stroke: #6c9f2d;
     }
   }
 
@@ -108,69 +119,67 @@ const props = defineProps({
     display: flex;
     gap: 4px;
     flex-direction: column;
+  }
+  .description_name {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
 
-    &_name {
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 26px;
-
-      @media (min-width: 1024px) {
-        font-size: 20px;
-        line-height: 30px;
-      }
+    @media (min-width: 1024px) {
+      font-size: 20px;
+      line-height: 30px;
     }
+  }
 
-    &_edition {
-      font-weight: 400;
+  .description_edition {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.6);
+
+    @media (min-width: 1024px) {
       font-size: 13px;
       line-height: 19px;
-      color: rgba(255, 255, 255, 0.6);
-
-      @media (min-width: 1024px) {
-        font-size: 13px;
-        line-height: 19px;
-      }
     }
   }
 
   &_purchase {
     display: flex;
     justify-content: space-between;
+  }
 
-    &_button {
-      padding: 10px 20px;
+  &_price {
+    display: flex;
+    gap: 13px;
+    flex-grow: 1;
+  }
 
-      @media (min-width: 1024px) {
-        padding: 12px 44px;
-      }
+  &_button {
+    padding: 10px 20px;
+
+    @media (min-width: 1024px) {
+      padding: 12px 44px;
+    }
+  }
+  .price_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .info_title {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      color: rgba(255, 255, 255, 0.6);
     }
 
-    &_price {
-      display: flex;
-      gap: 13px;
-      flex-grow: 1;
+    .info_subtitle {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 27px;
 
-      &_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &_title {
-          font-weight: 400;
-          font-size: 11px;
-          line-height: 16px;
-          color: rgba(255, 255, 255, 0.6);
-        }
-
-        &_subtitle {
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 27px;
-
-          @media (min-width: 1024px) {
-            font-size: 18px;
-          }
-        }
+      @media (min-width: 1024px) {
+        font-size: 18px;
       }
     }
   }

@@ -1,8 +1,10 @@
 <template>
-  <primary-section></primary-section>
-  <gallery-section></gallery-section>
-  <creators-section></creators-section>
-  <join-section></join-section>
+  <main id="primary">
+    <primary-section></primary-section>
+    <gallery-section id="gallery"></gallery-section>
+    <creators-section id="creators"></creators-section>
+    <join-section></join-section>
+  </main>
 </template>
 
 <script setup>

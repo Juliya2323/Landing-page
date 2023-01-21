@@ -93,7 +93,7 @@ const items = reactive([
 <style scoped lang="scss">
 .creators {
   background-color: #131313;
-  padding: 10px 7% 70px;
+  padding: 100px 7% 70px;
   display: flex;
   flex-direction: column;
   gap: 52px;

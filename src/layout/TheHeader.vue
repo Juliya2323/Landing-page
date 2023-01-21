@@ -1,14 +1,14 @@
 <template>
-  <div class="header_container">
-    <header class="header">
+  <header class="header_container">
+    <div class="header">
       <div class="header_main">
         <base-logo class="header_logo"></base-logo>
         <nav class="header_nav" :class="{ open: isOpen }">
           <ul class="header_nav_list">
             <li v-for="link in links" :key="link.id">
-              <router-link :to="link.id" class="header_nav_list_item">
+              <a :href="`#${link.id}`" class="header_nav_list_item">
                 {{ link.name }}
-              </router-link>
+              </a>
             </li>
           </ul>
         </nav>
@@ -21,22 +21,25 @@
           placeholder="Let's start"
         />
         </transition>
-        <img
+        <button class="header_search">
+          <img
           :src="Search"
           alt="search"
-          class="header_search"
           v-on:click="switchSearch"
         />
+        </button>
         <base-transparent-button
           class="header_button"
         ></base-transparent-button>
-        <img :src="Download" alt="download" class="header_download" />
+        <button  class="header_download" >
+          <img :src="Download" alt="download"/>
+        </button>
         <button class="header_burger" v-on:click="switchNav">
           <img :src="Burger" alt="burger_button" class="header_burger_img" />
         </button>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
 </template>
 
 <script setup>
@@ -45,9 +48,9 @@ import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
 const links = reactive([
-  { name: "Discover", id: "#primary" },
-  { name: "Marketplace", id: "#gallery" },
-  { name: "More", id: "#creators" },
+  { name: "Discover", id: "primary" },
+  { name: "Marketplace", id: "gallery" },
+  { name: "More", id: "creators" },
 ]);
 const isOpen = ref(false);
 const searchIsVisible = ref(false);
@@ -131,11 +134,12 @@ $bgc: #131313;
     }
 
     &.open {
-      transform: translate(-3%, 0);
+      transform: translate(0, 0);
       flex-direction: column;
       background-color: #131313;
       padding-top: 30px;
       width: 100vw;
+      height: 100vh;
       border: 0.3px solid transparent;
     }
 
@@ -217,6 +221,9 @@ $bgc: #131313;
   &_search {
     cursor: pointer;
     display: none;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease-out;
 
     &:hover {
       transform: translateY(-5px);
@@ -235,6 +242,8 @@ $bgc: #131313;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-out;
 
     &:hover {
       background-color: #5ba300;
