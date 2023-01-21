@@ -4,7 +4,7 @@
       <nav class="footer_container">
         <base-logo class="footer_logo"></base-logo>
         <div class="footer_nav">
-          <div class="footer_title">NFT Marketplace</div>
+          <h2 class="footer_title">NFT Marketplace</h2>
           <ul class="footer_list">
             <li
               v-for="(navItem, index) in navItems"
@@ -19,10 +19,10 @@
         </div>
       </nav>
       <div class="footer_subscription">
-        <div class="footer_title">Join Newsletter</div>
-        <div class="footer_text">
+        <h2 class="footer_title">Join Newsletter</h2>
+        <h3 class="footer_text">
           Subscribe to our newsletter to get the latest news and updates
-        </div>
+        </h3>
         <div class="footer_input">
           <input
             type="text"
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="footer_additional">
-      <div class="footer_info">Copyright @ 2022. All rights reserved</div>
+      <h4 class="footer_info">Copyright @ 2022. All rights reserved</h4>
       <ul class="footer_additional_list">
         <li v-for="listItem in listItems" class="footer_additional_list_item">
           <img :src="listItem" alt="svg" class="footer_additional_list_item_img"/>
