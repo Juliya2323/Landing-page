@@ -170,7 +170,7 @@ const editorCards = reactive([
       left: 86px;
 
       &:hover {
-        content: url(@/assets/icons/arrow-righ-green.svg);
+        //content: url(@/assets/icons/arrow-righ-green.svg);
       }
 
       @media (min-width: 1024px) {

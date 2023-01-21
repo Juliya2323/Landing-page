@@ -106,17 +106,11 @@ const props = defineProps({
     &_img:hover {
       fill: #6c9f2d;
       stroke: #6c9f2d;
-      &_img {
-        stroke: #6c9f2d;
-      }
     }
 
     &:active {
       fill: #6c9f2d;
       stroke: #6c9f2d;
-      &_img {
-        stroke: #6c9f2d;
-      }
     }
   }
 
