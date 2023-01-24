@@ -2,7 +2,15 @@
   <div class="cards">
     <div class="cards_description">
       <div class="cards_title">Actions</div>
-      <button class="cards_subtitle">View all</button>
+      <button class="cards_subtitle">
+        <div class="cards_text">View all</div>
+        <div class="cards_arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
     </div>
     <div class="cards_container">
       <ul class="cards_container_action-cards">
@@ -23,7 +31,15 @@
   <div class="cards">
     <div class="cards_description">
       <div class="cards_title">Editor’s Pick</div>
-      <button class="cards_subtitle">View all</button>
+      <button class="cards_subtitle">
+        <div class="cards_text">View all</div>
+        <div class="cards_arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
     </div>
     <div class="cards_container">
       <ul class="cards_container_editor-cards">
@@ -140,20 +156,28 @@ const editorCards = reactive([
       }
     }
     &_subtitle {
+      padding: 0;
       font-weight: 700;
       font-size: 22px;
       line-height: 30px;
-      padding-right: 32px;
-      position: relative;
       white-space:nowrap;
       background-color: transparent;
       border: none;
       color: white;
       cursor: pointer;
-      transition: all 0.2s ease-out;
+      transition: all 0.3s ease-out;
+      gap: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
 
       &:hover {
         color: #5ba300;
+        svg {
+          path {
+            stroke:#5ba300;
+          }
+        }
       }
 
       @media (min-width: 1024px) {
@@ -161,21 +185,13 @@ const editorCards = reactive([
         line-height: 36px;
         padding-left: 36px;
       }
+    
     }
 
-    &_subtitle::after {
-      content: url(@/assets/icons/arrow-right.svg);
-      position: absolute;
-      top: 4px;
-      left: 86px;
-
-      &:hover {
-        //content: url(@/assets/icons/arrow-righ-green.svg);
-      }
-
-      @media (min-width: 1024px) {
-        left: 133px
-      }
+    &_arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
   &_container {

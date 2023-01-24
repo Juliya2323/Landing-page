@@ -5,7 +5,7 @@
         <base-logo class="header_logo"></base-logo>
         <nav class="header_nav" :class="{ open: isOpen }">
           <ul class="header_nav_list">
-            <li v-for="link in links" :key="link.id">
+            <li v-for="link in links" :key="link.id"  class="header_nav_list_link">
               <a :href="`#${link.id}`" class="header_nav_list_item">
                 {{ link.name }}
               </a>
@@ -80,21 +80,19 @@ $bgc: #131313;
   justify-content: space-between;
   align-items: center;
   padding: 50px 20px;
-  position: relative;
 
   @media (min-width: 1024px) {
     padding: 50px 45px;
   }
 
   @media (min-width: 1440px) {
-    padding: 63px 88px 63px 66px;
+    padding: 63px 88px 53px 66px;
   }
 
   &_main {
     display: flex;
     align-items: center;
     gap: 25px;
-    position: relative;
   }
 
   &_additional {
@@ -136,24 +134,55 @@ $bgc: #131313;
     &.open {
       transform: translate(0, 0);
       flex-direction: column;
+      align-items: center;
+      left:0;
+      top: 0;
       background-color: #131313;
       padding-top: 30px;
       width: 100vw;
       height: 100vh;
       border: 0.3px solid transparent;
+      
     }
 
     &_list {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 50px;
       list-style-type: none;
-      margin-block-start: 0;
+      font-size: 50px;
+      margin-block-start: 120px;
       margin-block-end: 0;
       padding-inline-start: 0;
+      width: 100%;
+
+      &_link {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-top: 0.5px solid rgb(255, 255, 255);
+        border-bottom: 0.5px solid rgb(255, 255, 255);
+
+
+        @media (min-width: 768px) {
+        text-align: left;
+        border-top: 0.5px solid transparent;
+        border-bottom: 0.5px solid transparent;
+      }
+
+      }
+
 
       @media (min-width: 768px) {
         flex-direction: row;
+        gap: 30px;
+        margin-block-start: 0;
+        margin: 0;
+        line-height: 10px;
+        width: auto;
       }
 
       &_item {
@@ -164,11 +193,22 @@ $bgc: #131313;
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
+        transition: all 0.3s ease-out;
+
+        
+
+        &:hover {
+          color: #5ba300;
+        }
       }
     }
   }
   .header_burger {
     z-index: 10;
+
+    &_img {
+      background-color: transparent;
+    }
   }
 
   .header_input {

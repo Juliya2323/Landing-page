@@ -5,13 +5,14 @@
         <img :src="Icon" alt="icon" />
         <div class="card_title">{{ author }}</div>
       </div>
-      <svg
+      <button class="card_status" @click="activateStatus">
+        <svg
         width="24"
         height="24"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="card_status"
+        class="card_status_svg"
       >
         <path
           class="card_status_img"
@@ -21,8 +22,10 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
+          :class="{status: statusIsActive}"
         />
       </svg>
+      </button>
     </div>
     <img :src="imgLink" alt="card_img" class="card_img" />
     <div class="card_description">
@@ -45,7 +48,7 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
 import Icon from "@/assets/images/icon.png";
 
 const props = defineProps({
@@ -56,6 +59,11 @@ const props = defineProps({
   edition: String,
   price: String,
 });
+const statusIsActive = ref(false);
+function activateStatus() {
+  statusIsActive.value = !statusIsActive.value;
+  console.log('wwworks!!')
+}
 </script>
 
 <style scoped lang="scss">
@@ -101,16 +109,19 @@ const props = defineProps({
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 
-    &:hover,
-    &_img:hover {
-      fill: #6c9f2d;
-      stroke: #6c9f2d;
+    &:hover {
+      path {
+        stroke: #6c9f2d;
+        fill: #6c9f2d;
+      }
     }
 
-    &:active {
-      fill: #6c9f2d;
-      stroke: #6c9f2d;
+    .status {
+        stroke: #6c9f2d;
+        fill: #6c9f2d;
     }
   }
 

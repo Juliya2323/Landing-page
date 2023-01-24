@@ -171,6 +171,7 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       line-height: 25px;
       color: #ffffff;
       text-decoration: none;
+      transition: all 0.3s ease-out;
 
       &.green:hover {
         color: #5ba300;
@@ -350,7 +351,10 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
       cursor: pointer;
 
       svg:hover {
-        fill: #5ba300;
+        path {
+          stroke: #5ba300;
+        }
+       
       }
     }
   }
