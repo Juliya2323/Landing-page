@@ -1,6 +1,6 @@
 <template>
   <li class="item">
-    <img :src="imgLink" alt="img" class="item_img" />
+    <img :src="imgLink" alt="img" class="creator_img" />
     <div class="item_info">
       <div class="item_title">
         <div class="item_name">{{ name }}</div>

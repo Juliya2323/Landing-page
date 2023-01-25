@@ -44,13 +44,13 @@
           </base-button>
         </div>
         <div class="join_img">
-          <img :src="imgLink4" alt="img" />
+          <img :src="imgLink4" alt="person_img" />
         </div>
       </li>
       <li class="join_section">
         <img
           :src="thirdLineImg"
-          alt="img"
+          alt="person_img"
           v-for="thirdLineImg in thirdLineImgs"
         />
       </li>

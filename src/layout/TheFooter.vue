@@ -36,9 +36,6 @@
     <div class="footer_additional">
       <h4 class="footer_info">Copyright @ 2022. All rights reserved</h4>
       <ul class="footer_additional_list">
-        <!-- <li v-for="listItem in listItems" class="footer_additional_list_item">
-          <img :src="listItem" alt="svg" class="footer_additional_list_item_img"/>
-        </li> -->
         <li class="footer_additional_list_item">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

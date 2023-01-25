@@ -10,7 +10,7 @@
       </div>
       <div class="primary_icons">
         <ul class="primary_icons_list">
-          <li v-for="img in imgs" :key="img"><img :src="img" alt="img" /></li>
+          <li v-for="img in imgs" :key="img"><img :src="img" alt="artwork" /></li>
         </ul>
         <div class="primary_icons_description">
           <div class="description_number">100+</div>
@@ -200,6 +200,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
       margin-block-start: 0;
       margin-block-end: 0;
       padding-inline-start: 0;
+      pointer-events: none;
     }
 
     &_description {
@@ -305,6 +306,7 @@ $grayPrint: rgba(255, 255, 255, 0.6);
     &_img {
       width: 260px;
       height: auto;
+      pointer-events: none;
 
       @media (min-width: 1440px) {
         width: 394px;
