@@ -6,7 +6,7 @@
         <nav class="header_nav" :class="{ open: isOpen }">
           <ul class="header_nav_list">
             <li v-for="link in links" :key="link.id"  class="header_nav_list_link">
-              <a :href="`#${link.id}`" class="header_nav_list_item">
+              <a :href="`#${link.id}`" class="header_nav_list_item" @click="switchNavList">
                 {{ link.name }}
               </a>
             </li>
@@ -35,7 +35,8 @@
           <img :src="Download" alt="download"/>
         </button>
         <button class="header_burger" v-on:click="switchNav">
-          <img :src="Burger" alt="burger_button" class="header_burger_img" />
+          <img v-if="!isOpen" :src="Burger" alt="burger_button" class="header_burger_img" />
+          <img v-if="isOpen" :src="Close" alt="close_button" class="header_close_img" />
         </button>
       </div>
     </div>
@@ -47,6 +48,7 @@ import { reactive, ref } from "vue";
 import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
+import Close from "@/assets/icons/close.svg";
 const links = reactive([
   { name: "Discover", id: "primary" },
   { name: "Marketplace", id: "gallery" },
@@ -61,6 +63,10 @@ function switchNav() {
 
 function switchSearch() {
   searchIsVisible.value = !searchIsVisible.value;
+}
+
+function switchNavList() {
+  isOpen.value = false;
 }
 </script>
 
@@ -118,11 +124,15 @@ $bgc: #131313;
   }
 
   &_nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #131313;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    transform: translate(-130%, 0);
+    transform: translate(-100%, 0);
     transition: transform 0.2s ease-out;
     cursor: pointer;
 
@@ -137,9 +147,6 @@ $bgc: #131313;
       align-items: center;
       left:0;
       top: 0;
-      background-color: #131313;
-      padding-top: 30px;
-      width: 100vw;
       height: 100vh;
       border: 0.3px solid transparent;
       
@@ -205,9 +212,17 @@ $bgc: #131313;
   }
   .header_burger {
     z-index: 10;
+    line-height: 0;
+    box-sizing: border-box;
 
-    &_img {
+    &_img,
+    .header_close_img {
       background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
     }
   }
 

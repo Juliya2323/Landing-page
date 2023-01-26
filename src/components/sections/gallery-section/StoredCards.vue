@@ -13,9 +13,25 @@
       </button>
     </div>
     <div class="cards_container">
-      <ul class="cards_container_action-cards">
-        <base-card
-          v-for="actionCard in actionCards"
+      <swiper 
+        class="cards_container_action-cards"
+        :modules="modules"
+        slidesPerView="3"
+        :space-between="20"
+        :loop="true"
+        :pagination="{clickable: true}"
+        :autoplay="{
+          delay: 7000,
+          disableOnIteration: false,
+          pauseOnMouseEnter: true,
+        }"
+        :centeredSlides= "true"
+        :slideToClickedSlide= "true"
+        :watchSlidesVisibility= "true"
+        :watchSlidesProgress= "true"
+      >
+        <swiper-slide v-for="actionCard in actionCards">
+          <base-card
           :key="actionCard.id"
           :id="actionCard.id"
           :author="actionCard.author"
@@ -25,7 +41,8 @@
           :price="actionCard.price"
         >
         </base-card>
-      </ul>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
   <div class="cards">
@@ -42,9 +59,21 @@
       </button>
     </div>
     <div class="cards_container">
-      <ul class="cards_container_editor-cards">
-        <base-card
-          v-for="editorCard in editorCards"
+      <swiper 
+        class="cards_container_editor-cards"
+        :modules="modules"
+        slidesPerView="3"
+        :space-between="20"
+        :loop="true"
+        :pagination="{clickable: true}"
+        :autoplay="{
+          delay: 7000,
+          disableOnIteration: false,
+          pauseOnMouseEnter: true,
+        }"
+        >
+        <swiper-slide v-for="editorCard in editorCards">
+          <base-card
           :key="editorCard.id"
           :id="editorCard.id"
           :author="editorCard.author"
@@ -54,13 +83,18 @@
           :price="editorCard.price"
         >
         </base-card>
-      </ul>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <script setup>
 import { reactive } from "vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import gallery1 from "@/assets/images/gallery1.png";
 import gallery2 from "@/assets/images/gallery2.png";
 import gallery3 from "@/assets/images/gallery3.png";
@@ -68,6 +102,7 @@ import gallery4 from "@/assets/images/gallery4.png";
 import gallery5 from "@/assets/images/gallery5.png";
 import gallery6 from "@/assets/images/gallery6.png";
 import BaseCard from "@/components/UI/BaseCard.vue";
+
 
 const actionCards = reactive([
   {
@@ -88,6 +123,22 @@ const actionCards = reactive([
   },
   {
     id: "3",
+    author: "Eve Lillith",
+    imgLink: gallery3,
+    name: "Golden Cheetah",
+    edition: "Edition 1 of 5",
+    price: "1.0 ETH",
+  },
+  {
+    id: "4",
+    author: "Rose Edinburgh",
+    imgLink: gallery2,
+    name: "Mr Abstract",
+    edition: "Edition 1 of 3",
+    price: "2.11 ETH",
+  },
+  {
+    id: "5",
     author: "Eve Lillith",
     imgLink: gallery3,
     name: "Golden Cheetah",
@@ -132,6 +183,7 @@ const editorCards = reactive([
   flex-direction: column;
   gap: 25px;
   padding-bottom: 50px;
+  overflow: hidden;
 
   @media (min-width: 1024px) {
     padding-bottom: 96px;
@@ -171,6 +223,10 @@ const editorCards = reactive([
       justify-content: space-between;
       align-items:center;
 
+      path {
+        transition: all 0.3s ease-out;
+      }
+
       &:hover {
         color: #5ba300;
         svg {
@@ -195,11 +251,7 @@ const editorCards = reactive([
     }
 
   &_container {
-    overflow-x: scroll;
-
-    @media (min-width: 1440px) {
-      overflow-x:visible;
-      }
+    width: 100%;
 
     &_action-cards,
     &_editor-cards {

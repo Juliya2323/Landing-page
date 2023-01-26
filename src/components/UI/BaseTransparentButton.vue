@@ -24,5 +24,6 @@
 .transparent_button:active {
   box-shadow: 0 0 10px #5ba300;
   color: #5ba300;
+  transform: translateY(0);
 }
 </style>

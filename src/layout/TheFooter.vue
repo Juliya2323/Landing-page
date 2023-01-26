@@ -347,6 +347,10 @@ const listItems = reactive([instagramIcon, facebookIcon, twitterIcon]);
     &_item {
       cursor: pointer;
 
+      path {
+        transition: all 0.3s ease-out;
+      }
+
       svg:hover {
         path {
           stroke: #5ba300;

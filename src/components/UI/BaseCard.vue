@@ -7,12 +7,12 @@
       </div>
       <button class="card_status" @click="activateStatus">
         <svg
+        class="card_status_svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="card_status_svg"
       >
         <path
           class="card_status_img"
@@ -77,7 +77,9 @@ function activateStatus() {
   gap: 13px;
 
   &_img {
+    display: flex;
     width: 260px;
+    width: fit-content;
     height: auto;
 
     @media (min-width: 1024px) {
@@ -111,11 +113,11 @@ function activateStatus() {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    box-sizing: border-box;
 
     &:hover {
       path {
         stroke: #6c9f2d;
-        fill: #6c9f2d;
       }
     }
 
