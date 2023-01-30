@@ -15,20 +15,12 @@
     <div class="cards_container">
       <swiper 
         class="cards_container_action-cards"
-        :modules="modules"
-        slidesPerView="3"
+        :slidesPerView="3"
         :space-between="20"
         :loop="true"
-        :pagination="{clickable: true}"
-        :autoplay="{
-          delay: 7000,
-          disableOnIteration: false,
-          pauseOnMouseEnter: true,
-        }"
-        :centeredSlides= "true"
-        :slideToClickedSlide= "true"
-        :watchSlidesVisibility= "true"
-        :watchSlidesProgress= "true"
+        :breakpoints="breakpoints"
+        :centeredSlides="true"
+        :centeredSlidesBounds="true"
       >
         <swiper-slide v-for="actionCard in actionCards">
           <base-card
@@ -62,15 +54,12 @@
       <swiper 
         class="cards_container_editor-cards"
         :modules="modules"
-        slidesPerView="3"
+        :slidesPerView="3"
         :space-between="20"
         :loop="true"
-        :pagination="{clickable: true}"
-        :autoplay="{
-          delay: 7000,
-          disableOnIteration: false,
-          pauseOnMouseEnter: true,
-        }"
+        :breakpoints="breakpoints"
+        :centeredSlides="true"
+        :centeredSlidesBounds="true"
         >
         <swiper-slide v-for="editorCard in editorCards">
           <base-card
@@ -92,9 +81,7 @@
 <script setup>
 import { reactive } from "vue";
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import gallery1 from "@/assets/images/gallery1.png";
 import gallery2 from "@/assets/images/gallery2.png";
 import gallery3 from "@/assets/images/gallery3.png";
@@ -103,6 +90,23 @@ import gallery5 from "@/assets/images/gallery5.png";
 import gallery6 from "@/assets/images/gallery6.png";
 import BaseCard from "@/components/UI/BaseCard.vue";
 
+const breakpoints = reactive({
+  
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+    },
+    835: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1350: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    
+  }
+})
 
 const actionCards = reactive([
   {
@@ -261,9 +265,9 @@ const editorCards = reactive([
       list-style-type: none;
       margin: 0;
       padding: 0;
+
+      
     }
   }
-
-  
 }
 </style>

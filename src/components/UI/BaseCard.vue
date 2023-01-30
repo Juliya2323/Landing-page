@@ -27,7 +27,9 @@
       </svg>
       </button>
     </div>
-    <img :src="imgLink" alt="card_img" class="card_img" />
+    <div class="card_img_wrapper">
+      <img :src="imgLink" alt="card_img" class="card_img" />
+    </div>
     <div class="card_description">
       <div class="description_name">{{ name }}</div>
       <div class="description_edition">{{ edition }}</div>
@@ -68,25 +70,38 @@ function activateStatus() {
 
 <style scoped lang="scss">
 .card {
-  max-width: 370px;
+  max-width: 330px;
   max-height: 588px;
   background-color: #1d1d1d;
   padding: 26px 22px;
   display: flex;
   flex-direction: column;
   gap: 13px;
+  cursor: pointer;
+
+  &_img_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &_img {
     display: flex;
-    width: 260px;
-    width: fit-content;
+    width: 300px;
     height: auto;
+    border-radius: 9%;
+    margin: 0;
 
-    @media (min-width: 1024px) {
-      width: 325px;
-      height: 332px;
+    @media (min-width: 790px) {
+      width: 330px;
+    }
+
+    @media (min-width: 1170px) {
+      width: 330px;
     }
   }
+
+  
 
   &_main {
     display: flex;
@@ -114,6 +129,11 @@ function activateStatus() {
     background-color: transparent;
     border: none;
     box-sizing: border-box;
+    transition: all 0.3s ease-out;
+
+    & path {
+      transition: all 0.3s ease-out;
+    }
 
     &:hover {
       path {

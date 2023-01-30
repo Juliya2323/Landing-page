@@ -49,6 +49,7 @@ import Search from "@/assets/icons/search.svg";
 import Download from "@/assets/icons/arrow.svg";
 import Burger from "@/assets/icons/burger.svg";
 import Close from "@/assets/icons/close.svg";
+import { switchLock } from "../helpers";
 const links = reactive([
   { name: "Discover", id: "primary" },
   { name: "Marketplace", id: "gallery" },
@@ -59,14 +60,15 @@ const searchIsVisible = ref(false);
 
 function switchNav() {
   isOpen.value = !isOpen.value;
-}
-
-function switchSearch() {
-  searchIsVisible.value = !searchIsVisible.value;
+  switchLock(isOpen.value);
 }
 
 function switchNavList() {
   isOpen.value = false;
+}
+
+function switchSearch() {
+  searchIsVisible.value = !searchIsVisible.value;
 }
 </script>
 
@@ -79,6 +81,8 @@ $bgc: #131313;
   width: 100%;
   z-index: 7;
 }
+
+
 
 .header {
   background-color: $bgc;
@@ -214,6 +218,7 @@ $bgc: #131313;
     z-index: 10;
     line-height: 0;
     box-sizing: border-box;
+    cursor: pointer;
 
     &_img,
     .header_close_img {
