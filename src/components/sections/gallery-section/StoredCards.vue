@@ -5,34 +5,50 @@
       <button class="cards_subtitle">
         <div class="cards_text">View all</div>
         <div class="cards_arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </div>
       </button>
     </div>
     <div class="cards_container">
-      <swiper 
+      <swiper
         class="cards_container_action-cards"
         :slidesPerView="3"
         :space-between="20"
         :loop="true"
         :breakpoints="breakpoints"
-        :centeredSlides="true"
-        :centeredSlidesBounds="true"
       >
         <swiper-slide v-for="actionCard in actionCards">
           <base-card
-          :key="actionCard.id"
-          :id="actionCard.id"
-          :author="actionCard.author"
-          :imgLink="actionCard.imgLink"
-          :name="actionCard.name"
-          :edition="actionCard.edition"
-          :price="actionCard.price"
-        >
-        </base-card>
+            :key="actionCard.id"
+            :id="actionCard.id"
+            :author="actionCard.author"
+            :imgLink="actionCard.imgLink"
+            :name="actionCard.name"
+            :edition="actionCard.edition"
+            :price="actionCard.price"
+          >
+          </base-card>
         </swiper-slide>
       </swiper>
     </div>
@@ -43,35 +59,51 @@
       <button class="cards_subtitle">
         <div class="cards_text">View all</div>
         <div class="cards_arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </div>
       </button>
     </div>
     <div class="cards_container">
-      <swiper 
+      <swiper
         class="cards_container_editor-cards"
         :modules="modules"
         :slidesPerView="3"
         :space-between="20"
         :loop="true"
         :breakpoints="breakpoints"
-        :centeredSlides="true"
-        :centeredSlidesBounds="true"
-        >
+      >
         <swiper-slide v-for="editorCard in editorCards">
           <base-card
-          :key="editorCard.id"
-          :id="editorCard.id"
-          :author="editorCard.author"
-          :imgLink="editorCard.imgLink"
-          :name="editorCard.name"
-          :edition="editorCard.edition"
-          :price="editorCard.price"
-        >
-        </base-card>
+            :key="editorCard.id"
+            :id="editorCard.id"
+            :author="editorCard.author"
+            :imgLink="editorCard.imgLink"
+            :name="editorCard.name"
+            :edition="editorCard.edition"
+            :price="editorCard.price"
+          >
+          </base-card>
         </swiper-slide>
       </swiper>
     </div>
@@ -80,8 +112,8 @@
 
 <script setup>
 import { reactive } from "vue";
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
 import gallery1 from "@/assets/images/gallery1.png";
 import gallery2 from "@/assets/images/gallery2.png";
 import gallery3 from "@/assets/images/gallery3.png";
@@ -91,22 +123,23 @@ import gallery6 from "@/assets/images/gallery6.png";
 import BaseCard from "@/components/UI/BaseCard.vue";
 
 const breakpoints = reactive({
-  
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-
-    },
-    835: {
-      slidesPerView: 2,
-      spaceBetween: 30
-    },
-    1350: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    
-  }
-})
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 20,
+  },
+  835: {
+    slidesPerView: 2,
+    spaceBetween: 30,
+  },
+  1400: {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  },
+  1900: {
+    slidesPerView: 4,
+    spaceBetween: 30,
+  },
+});
 
 const actionCards = reactive([
   {
@@ -198,61 +231,59 @@ const editorCards = reactive([
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &_title {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
 
-      @media (min-width: 1024px) {
-        font-size: 36px;
-        line-height: 54px;
-      }
+    @media (min-width: 1024px) {
+      font-size: 36px;
+      line-height: 54px;
     }
-    &_subtitle {
-      padding: 0;
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 30px;
-      white-space:nowrap;
-      background-color: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
+  }
+  &_subtitle {
+    padding: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    path {
       transition: all 0.3s ease-out;
-      gap: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items:center;
+    }
 
-      path {
-        transition: all 0.3s ease-out;
-      }
-
-      &:hover {
-        color: #5ba300;
-        svg {
-          path {
-            stroke:#5ba300;
-          }
+    &:hover {
+      color: #5ba300;
+      svg {
+        path {
+          stroke: #5ba300;
         }
       }
-
-      @media (min-width: 1024px) {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 36px;
-      }
-    
     }
 
-    &_arrow {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    @media (min-width: 1024px) {
+      font-size: 24px;
+      line-height: 36px;
+      padding-left: 36px;
     }
+  }
+
+  &_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &_container {
     width: 100%;
@@ -265,8 +296,6 @@ const editorCards = reactive([
       list-style-type: none;
       margin: 0;
       padding: 0;
-
-      
     }
   }
 }

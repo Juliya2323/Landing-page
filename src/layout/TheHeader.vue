@@ -5,8 +5,8 @@
         <base-logo class="header_logo"></base-logo>
         <nav class="header_nav" :class="{ open: isOpen }">
           <ul class="header_nav_list">
-            <li v-for="link in links" :key="link.id"  class="header_nav_list_link">
-              <a :href="`#${link.id}`" class="header_nav_list_item" @click="switchNavList">
+            <li v-for="link in links" :key="link.id"  class="header_nav_list_link" @click="switchNavList">
+              <a :href="`#${link.id}`" class="header_nav_list_item">
                 {{ link.name }}
               </a>
             </li>
@@ -96,7 +96,7 @@ $bgc: #131313;
   }
 
   @media (min-width: 1440px) {
-    padding: 63px 88px 53px 66px;
+    padding: 63px 88px 43px 66px;
   }
 
   &_main {
@@ -169,8 +169,8 @@ $bgc: #131313;
 
       &_link {
         display: flex;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        height: 88px;
+        width: 100%;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -197,6 +197,11 @@ $bgc: #131313;
       }
 
       &_item {
+        height: 88px;
+        width: 100%;
+        display: flex;
+        align-items:center;
+        justify-content: center;    
         font-family: "Arial";
         font-weight: 400;
         line-height: 25px;

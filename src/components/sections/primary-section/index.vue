@@ -28,7 +28,7 @@
         <img :src="monkeyImg" alt="card" class="primary_card_img" />
         <div class="primary_card_info">
           <div class="info_time">
-            <div class="time_main">23h : 41m : 11s</div>
+            <div class="time_main"><base-timer></base-timer></div>
             <div class="time_additional">Remaining time</div>
           </div>
           <div class="info_cost">
