@@ -87,7 +87,6 @@
     <div class="cards_container">
       <swiper
         class="cards_container_editor-cards"
-        :modules="modules"
         :slidesPerView="3"
         :space-between="20"
         :loop="true"
