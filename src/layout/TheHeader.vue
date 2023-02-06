@@ -65,6 +65,7 @@ function switchNav() {
 
 function switchNavList() {
   isOpen.value = false;
+  switchLock(isOpen.value);
 }
 
 function switchSearch() {
